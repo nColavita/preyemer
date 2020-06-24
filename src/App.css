@@ -1,13 +1,23 @@
-* {
+html,
+body,
+div,
+ul,
+li,
+nav,
+header,
+footer {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     background-color: #393939;
     color: white;
     font-family: "Montserrat", sans-serif;
+}
+
+div {
+    box-sizing: border-box;
 }
 
 a {

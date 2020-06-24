@@ -2,32 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const StyledNavLinks = styled.ul``;
-
-const StyledNavLink = styled.li`
-    display: inline-block;
-    margin: 0 5px;
-    cursor: pointer;
-    font-size: 1em;
-`;
-
-const StyledNavButton = styled(Link)`
-    &:hover {
-        color: #f8f873;
-    }
-`;
+import {
+    StyledNavLinks,
+    StyledNavLink,
+    StyledNavButton,
+} from "../styled/NavLinks";
 
 const NavLinks = () => {
     return (
         <StyledNavLinks>
             <StyledNavLink>
-                <StyledNavButton to="">about us</StyledNavButton>
+                <StyledNavButton to="/about-us">about us</StyledNavButton>
             </StyledNavLink>
             <StyledNavLink>
-                <StyledNavButton to="">connect</StyledNavButton>
+                <StyledNavButton to="/connect">connect</StyledNavButton>
             </StyledNavLink>
             <StyledNavLink>
-                <StyledNavButton to="">careers</StyledNavButton>
+                <StyledNavButton to="/careers">careers</StyledNavButton>
             </StyledNavLink>
         </StyledNavLinks>
     );

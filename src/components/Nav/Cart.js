@@ -8,8 +8,10 @@ export const StyledCart = styled(Link)`
 
 const Cart = () => {
     return (
-        <StyledCart>
-            <h4>cart (0)</h4>
+        <StyledCart to="/checkout">
+            <h4>
+                <span>cart </span>(0)
+            </h4>
         </StyledCart>
     );
 };
