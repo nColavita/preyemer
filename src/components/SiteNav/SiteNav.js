@@ -1,19 +1,8 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 import { StyledNavLinks, StyledNavButton } from "../styled/NavLinks";
-
-const SiteNavListItem = styled.li`
-    cursor: pointer;
-    display: inline-block;
-    font-size: 1em;
-    margin: 0 35px;
-    font-size: 1.2em;
-
-    &:hover ${StyledNavButton} {
-        color: ${(props) => props.color};
-    }
-`;
 
 const SiteNavContainer = styled.div`
     width: 100%;
@@ -22,24 +11,45 @@ const SiteNavContainer = styled.div`
     margin-top: 25px;
 `;
 
+const SiteNavListItem = styled.li`
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0 35px;
+    font-size: 1.2em;
+`;
+
+const activeClassName = "active";
+
+const SiteNavLink = styled(NavLink).attrs({ activeClassName })`
+    transition: color 0.5s;
+
+    &.${activeClassName} {
+        color: ${(props) => props.color};
+    }
+    &.hover {
+        color: ${(props) => props.color};
+    }
+`;
+
 const SiteNav = () => {
     return (
         <SiteNavContainer>
             <StyledNavLinks>
-                <SiteNavListItem color={"#e086c8"}>
-                    <StyledNavButton to="/category/fashion">
+                <SiteNavListItem>
+                    <SiteNavLink color={"#e086c8"} to="/category/fashion">
                         fashion
-                    </StyledNavButton>
+                    </SiteNavLink>
                 </SiteNavListItem>
-                <SiteNavListItem color={"#b5e69b"}>
-                    <StyledNavButton to="/category/nature">
+                <SiteNavListItem>
+                    <SiteNavLink color={"#b5e69b"} to="/category/nature">
                         nature
-                    </StyledNavButton>
+                    </SiteNavLink>
                 </SiteNavListItem>
-                <SiteNavListItem color={"#9bd8e6"}>
-                    <StyledNavButton to="/category/patterns">
+                <SiteNavListItem>
+                    <SiteNavLink color={"#9bd8e6"} to="/category/patterns">
                         patterns
-                    </StyledNavButton>
+                    </SiteNavLink>
                 </SiteNavListItem>
             </StyledNavLinks>
         </SiteNavContainer>
