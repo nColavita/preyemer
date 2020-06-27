@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import styled from "styled-components";
 
@@ -14,7 +14,8 @@ import NotFound from "./components/pages/NotFound";
 import "./App.css";
 
 const Container = styled.div`
-    max-width: 90vw;
+    width: 75vw;
+    max-width: 1366px;
     margin: 0 auto;
     padding-top: 10px;
 `;

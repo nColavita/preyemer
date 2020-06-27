@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-import { StyledNavLinks, StyledNavButton } from "../styled/NavLinks";
+import { StyledNavLinks } from "../styled/NavLinks";
 
 const SiteNavContainer = styled.div`
     width: 100%;
