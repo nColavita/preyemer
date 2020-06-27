@@ -1,25 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { motion, useCycle } from "framer-motion";
 
-const NewArrivalImageContainer = styled.div`
+// *** STYLES *** //
+const NewArrivalImageContainer = styled(motion.div)`
     display: inline-block;
     position: relative;
+    overflow: hidden;
     cursor: pointer;
 `;
+
+const NewArrivalBG = styled(motion.div)`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.75);
+`;
+
 const NewArrivalImage = styled.img`
     width: 375px;
     height: 300px;
     object-fit: cover;
 `;
-const NewArrivalHoverBackground = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 375px;
-    height: 300px;
-    background-color: rgba(0, 0, 0, 0.75);
-`;
-const NewArrivalHoverFooter = styled.div`
+const NewArrivalFooter = styled(motion.div)`
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -30,6 +35,9 @@ const NewArrivalHoverFooter = styled.div`
 
     ul {
         text-align: right;
+        right: 10px;
+        top: 12px;
+        position: absolute;
     }
 
     li {
@@ -55,35 +63,51 @@ const NewArrivalHoverFooter = styled.div`
         padding-left: 10px;
         display: inline-block;
     }
-    div:nth-child(2) {
-        right: 10px;
-        top: 12px;
-        position: absolute;
-    }
 `;
 
+// *** Logic *** //
+const footerVariants = {
+    closed: { y: "200px" },
+    open: { y: 0, delay: 0.25 },
+};
+const bgVariants = {
+    closed: { opacity: 0 },
+    open: { opacity: 1 },
+};
+
+// *** Component *** //
 const NewArrival = (props) => {
-    console.log(props.product.sizes);
+    const [isOpen, toggleOpen] = useCycle(false, true);
+
     return (
-        <NewArrivalImageContainer>
-            <NewArrivalHoverBackground />
-            <NewArrivalHoverFooter>
+        <NewArrivalImageContainer
+            onHoverStart={() => toggleOpen()}
+            onHoverEnd={() => toggleOpen()}
+        >
+            <NewArrivalBG
+                initial={false}
+                animate={isOpen ? "open" : "closed"}
+                variants={bgVariants}
+            />
+            <NewArrivalFooter
+                initial={false}
+                animate={isOpen ? "open" : "closed"}
+                variants={footerVariants}
+            >
                 <div>
                     <h1>{props.product.title}</h1>
                     <h2>
                         Created by: <span>{props.product.photographer}</span>
                     </h2>
                 </div>
-                <div>
-                    <ul>
-                        {props.product.sizes.map((size) => (
-                            <li>
-                                {size.size} - ${size.price}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </NewArrivalHoverFooter>
+                <ul>
+                    {props.product.sizes.map((size) => (
+                        <li>
+                            {size.size} - ${size.price}
+                        </li>
+                    ))}
+                </ul>
+            </NewArrivalFooter>
             <NewArrivalImage src={`./${props.product.src}`}></NewArrivalImage>
         </NewArrivalImageContainer>
     );

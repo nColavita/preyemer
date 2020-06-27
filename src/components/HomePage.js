@@ -19,7 +19,12 @@ const HomePage = () => {
         <div>
             <NewArrivalContainer>
                 {products.map((product) => {
-                    return <NewArrival key={product.title} product={product} />;
+                    console.log(product.category);
+                    if (product.category === "New Arrival") {
+                        return (
+                            <NewArrival key={product.title} product={product} />
+                        );
+                    }
                 })}
             </NewArrivalContainer>
         </div>
