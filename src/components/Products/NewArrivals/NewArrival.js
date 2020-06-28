@@ -3,24 +3,14 @@ import styled from "styled-components";
 import { motion, useCycle } from "framer-motion";
 
 // *** STYLES *** //
-const NewArrivalImageContainer = styled(motion.div)`
-    display: inline-block;
+const NewArrivalContainer = styled(motion.div)`
+    cursor: pointer;
     position: relative;
     overflow: hidden;
-    cursor: pointer;
-`;
-
-const NewArrivalBG = styled(motion.div)`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 300px;
-    background-color: rgba(0, 0, 0, 0.75);
 `;
 
 const NewArrivalImage = styled.img`
-    width: 375px;
+    width: 100%;
     height: 300px;
     object-fit: cover;
 `;
@@ -65,10 +55,19 @@ const NewArrivalFooter = styled(motion.div)`
     }
 `;
 
+const NewArrivalBG = styled(motion.div)`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.75);
+`;
+
 // *** Logic *** //
 const footerVariants = {
     closed: { y: "200px" },
-    open: { y: 0, delay: 0.25 },
+    open: { y: "-5px", delay: 0.25 },
 };
 const bgVariants = {
     closed: { opacity: 0 },
@@ -80,7 +79,7 @@ const NewArrival = (props) => {
     const [isOpen, toggleOpen] = useCycle(false, true);
 
     return (
-        <NewArrivalImageContainer
+        <NewArrivalContainer
             onHoverStart={() => toggleOpen()}
             onHoverEnd={() => toggleOpen()}
         >
@@ -97,7 +96,7 @@ const NewArrival = (props) => {
                 <div>
                     <h1>{props.product.title}</h1>
                     <h2>
-                        Created by: <span>{props.product.photographer}</span>
+                        Shot by: <span>{props.product.photographer}</span>
                     </h2>
                 </div>
                 <ul>
@@ -108,8 +107,9 @@ const NewArrival = (props) => {
                     ))}
                 </ul>
             </NewArrivalFooter>
-            <NewArrivalImage src={`./${props.product.src}`}></NewArrivalImage>
-        </NewArrivalImageContainer>
+            {/* <NewArrivalImage src={`./${props.product.src}`}></NewArrivalImage> */}
+            <NewArrivalImage src={``}></NewArrivalImage>
+        </NewArrivalContainer>
     );
 };
 

@@ -8,7 +8,7 @@ const SiteNavContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 25px;
+    margin: 25px 0 150px 0;
 `;
 
 const SiteNavListItem = styled.li`

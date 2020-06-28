@@ -74,4 +74,104 @@ export const PRODUCTS = [
             },
         ],
     },
+    {
+        id: 4,
+        src: "./assets/ashkan-forouzani-m0l9NBCivuk-unsplash.jpg",
+        title: "Wall",
+        photographer: "Ashkan Forouzani",
+        category: "Patterns",
+        bestseller: true,
+        sizes: [
+            {
+                size: "small",
+                price: "39.99",
+                dimensions: "12inx12in",
+            },
+            {
+                size: "medium",
+                price: "49.99",
+                dimensions: "24inx24in",
+            },
+            {
+                size: "large",
+                price: "59.99",
+                dimensions: "48inx48in",
+            },
+        ],
+    },
+    {
+        id: 5,
+        src: "./assets/freestocks-VFrcRtEQKL8-unsplash.jpg",
+        title: "Fashion Week",
+        photographer: "Michael Angelo",
+        category: "Patterns",
+        bestseller: true,
+        sizes: [
+            {
+                size: "small",
+                price: "39.99",
+                dimensions: "12inx12in",
+            },
+            {
+                size: "medium",
+                price: "49.99",
+                dimensions: "24inx24in",
+            },
+            {
+                size: "large",
+                price: "59.99",
+                dimensions: "48inx48in",
+            },
+        ],
+    },
+    {
+        id: 6,
+        src: "./assets/guille-pozzi-SHcHVFhz7-M-unsplash.jpg",
+        title: "Stary Night",
+        photographer: "Guille Pozze",
+        category: "Patterns",
+        bestseller: true,
+        sizes: [
+            {
+                size: "small",
+                price: "39.99",
+                dimensions: "12inx12in",
+            },
+            {
+                size: "medium",
+                price: "49.99",
+                dimensions: "24inx24in",
+            },
+            {
+                size: "large",
+                price: "59.99",
+                dimensions: "48inx48in",
+            },
+        ],
+    },
+    {
+        id: 7,
+        src: "./assets/bekir-donmez-eofm5R5f9Kw-unsplash.jpg",
+        title: "Zen",
+        photographer: "Bekir Donmez",
+        category: "Patterns",
+        bestseller: true,
+        sizes: [
+            {
+                size: "small",
+                price: "39.99",
+                dimensions: "12inx12in",
+            },
+            {
+                size: "medium",
+                price: "49.99",
+                dimensions: "24inx24in",
+            },
+            {
+                size: "large",
+                price: "59.99",
+                dimensions: "48inx48in",
+            },
+        ],
+    },
 ];
