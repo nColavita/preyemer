@@ -7,10 +7,12 @@ import BestSeller from "./BestSeller";
 
 const BestSellersContainer = styled.div`
     width: 100%;
-    padding: 25px;
+    padding: 25px 50px;
     background-color: white;
     color: black;
     font-family: inherit;
+
+    margin-top: 100px;
 
     display: flex;
     justify-content: space-between;

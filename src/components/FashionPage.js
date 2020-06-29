@@ -1,11 +1,9 @@
 import React from "react";
 
+import Category from "../components/Category/Category";
+
 const FashionPage = () => {
-    return (
-        <div>
-            <h1>Fashion Page</h1>
-        </div>
-    );
+    return <Category />;
 };
 
 export default FashionPage;

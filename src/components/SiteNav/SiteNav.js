@@ -23,9 +23,11 @@ const activeClassName = "active";
 
 const SiteNavLink = styled(NavLink).attrs({ activeClassName })`
     transition: color 0.5s;
+    padding-bottom: 4px;
 
     &.${activeClassName} {
         color: ${(props) => props.color};
+        border-bottom: solid ${(props) => props.color} 1px;
     }
     &.hover {
         color: ${(props) => props.color};

@@ -7,6 +7,8 @@ const NewArrivalContainer = styled(motion.div)`
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    width: auto;
+    height: 300px;
 `;
 
 const NewArrivalImage = styled.img`
@@ -34,6 +36,10 @@ const NewArrivalFooter = styled(motion.div)`
         list-style-type: none;
         margin: 5px 0;
         font-size: 0.95em;
+
+        &:hover {
+            font-weight: bold;
+        }
     }
 
     h1 {
@@ -67,7 +73,7 @@ const NewArrivalBG = styled(motion.div)`
 // *** Logic *** //
 const footerVariants = {
     closed: { y: "200px" },
-    open: { y: "-5px", delay: 0.25 },
+    open: { y: "0", delay: 0.25 },
 };
 const bgVariants = {
     closed: { opacity: 0 },

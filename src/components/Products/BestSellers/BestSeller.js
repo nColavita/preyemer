@@ -5,8 +5,8 @@ import { motion, useCycle } from "framer-motion";
 const BestSellerContainer = styled(motion.div)`
     cursor: pointer;
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 185px;
+    height: 155px;
     background-color: darkkhaki;
     overflow: hidden;
 `;
@@ -18,18 +18,18 @@ const BestSellerHoverContainer = styled(motion.div)`
     align-items: center;
     top: 0;
     left: 0;
-    width: 200px;
-    height: 200px;
+    width: 185px;
+    height: 155px;
 
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.85);
 `;
 
 const BestSellerContent = styled(motion.div)`
     color: white;
     font-weight: 200;
-    width: 180px;
-    height: 180px;
-    padding: 20px;
+    width: 160px;
+    height: 135px;
+    padding: 10px;
     position: relative;
 
     text-align: center;
@@ -37,45 +37,50 @@ const BestSellerContent = styled(motion.div)`
     ul {
         text-align: left;
         list-style-type: none;
+        margin-left: 5px;
     }
 
     li {
-        margin: 10px 0;
-        font-size: 0.95em;
+        margin: 5px 0;
+        font-size: 0.7em;
         font-weight: bold;
+
+        &:hover {
+            font-weight: normal;
+        }
     }
 
     h1 {
         margin-bottom: 15px;
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     h2 {
-        font-size: 0.75em;
-        font-weight: 200;
+        font-size: 0.7em;
+        font-weight: 400;
         text-align: left;
         position: absolute;
-        left: 20px;
+        left: 15px;
         bottom: 15px;
     }
 `;
 
 const BestSellerImg = styled.img`
     width: 100%;
-    height: 200px;
+    height: 150px;
     object-fit: cover;
 `;
 
 const BestSellerHoverFrame = styled(motion.div)`
     position: absolute;
-    width: 180px;
-    height: 180px;
-    border: solid white 5px;
+    width: 160px;
+    height: 135px;
+    border: solid white 4px;
 `;
 
 // *** Logic *** //
 const frameVariants = {
-    closed: { scale: 0.65, opacity: 0 },
+    closed: { scale: 0.5, opacity: 0 },
     open: { scale: 1, opacity: 1 },
 };
 const frameConentVariants = {
@@ -100,13 +105,13 @@ const BestSeller = (props) => {
                     initial={false}
                     animate={isOpen ? "open" : "closed"}
                     variants={frameVariants}
-                    transition={{ type: "tween", duration: 0.15, delay: 0.25 }}
+                    transition={{ type: "tween", duration: 0.15, delay: 0.15 }}
                 />
                 <BestSellerContent
                     initial={false}
                     animate={isOpen ? "open" : "closed"}
                     variants={frameConentVariants}
-                    transition={{ delay: 0.45 }}
+                    transition={{ delay: 0.15 }}
                 >
                     <h1>{props.product.title}</h1>
                     <ul>
