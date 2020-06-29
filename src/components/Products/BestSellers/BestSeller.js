@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import { motion, useCycle } from "framer-motion";
 
-const BestSellerContainer = styled.div`
+const BestSellerContainer = styled(motion.div)`
     cursor: pointer;
     position: relative;
     width: 200px;
     height: 200px;
-    background-color: mediumblue;
+    background-color: darkkhaki;
     overflow: hidden;
 `;
 
-const BestSellerHoverContainer = styled.div`
+const BestSellerHoverContainer = styled(motion.div)`
     position: absolute;
     display: flex;
     justify-content: center;
@@ -23,13 +24,12 @@ const BestSellerHoverContainer = styled.div`
     background-color: rgba(0, 0, 0, 0.8);
 `;
 
-const BestSellerContent = styled.div`
-    border: solid white 5px;
+const BestSellerContent = styled(motion.div)`
     color: white;
     font-weight: 200;
     width: 180px;
     height: 180px;
-    padding: 5px;
+    padding: 20px;
     position: relative;
 
     text-align: center;
@@ -37,7 +37,6 @@ const BestSellerContent = styled.div`
     ul {
         text-align: left;
         list-style-type: none;
-        margin-left: 5px;
     }
 
     li {
@@ -47,7 +46,7 @@ const BestSellerContent = styled.div`
     }
 
     h1 {
-        margin-bottom: 25px;
+        margin-bottom: 15px;
         font-size: 1.2em;
     }
 
@@ -56,8 +55,8 @@ const BestSellerContent = styled.div`
         font-weight: 200;
         text-align: left;
         position: absolute;
-        left: 10px;
-        bottom: 10px;
+        left: 20px;
+        bottom: 15px;
     }
 `;
 
@@ -67,11 +66,48 @@ const BestSellerImg = styled.img`
     object-fit: cover;
 `;
 
+const BestSellerHoverFrame = styled(motion.div)`
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: solid white 5px;
+`;
+
+// *** Logic *** //
+const frameVariants = {
+    closed: { scale: 0.65, opacity: 0 },
+    open: { scale: 1, opacity: 1 },
+};
+const frameConentVariants = {
+    closed: { opacity: 0 },
+    open: { opacity: 1 },
+};
+
 const BestSeller = (props) => {
+    const [isOpen, toggleOpen] = useCycle(false, true);
+
     return (
-        <BestSellerContainer>
-            <BestSellerHoverContainer>
-                <BestSellerContent>
+        <BestSellerContainer
+            onHoverStart={() => toggleOpen()}
+            onHoverEnd={() => toggleOpen()}
+        >
+            <BestSellerHoverContainer
+                initial={false}
+                animate={isOpen ? "open" : "closed"}
+                variants={frameConentVariants}
+            >
+                <BestSellerHoverFrame
+                    initial={false}
+                    animate={isOpen ? "open" : "closed"}
+                    variants={frameVariants}
+                    transition={{ type: "tween", duration: 0.15, delay: 0.25 }}
+                />
+                <BestSellerContent
+                    initial={false}
+                    animate={isOpen ? "open" : "closed"}
+                    variants={frameConentVariants}
+                    transition={{ delay: 0.45 }}
+                >
                     <h1>{props.product.title}</h1>
                     <ul>
                         {props.product.sizes.map((size) => {
