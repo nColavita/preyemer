@@ -18,7 +18,7 @@ const NewArrivals = () => {
     return (
         <NewArrivalsContainer>
             {products.map((product) => {
-                if (product.category === "New Arrival") {
+                if (product.newarrival) {
                     return <NewArrival key={product.title} product={product} />;
                 }
             })}

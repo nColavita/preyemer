@@ -4,8 +4,9 @@ export const PRODUCTS = [
         src: "./assets/mike-von-TPUGbQmyVwE-unsplash.jpg",
         title: "Orange Wall",
         photographer: "Mike Von",
-        category: "New Arrival",
+        category: "fashion",
         bestseller: false,
+        newarrival: true,
         sizes: [
             {
                 size: "small",
@@ -29,8 +30,9 @@ export const PRODUCTS = [
         src: "./assets/r-d-smith-c5zM69wIMCE-unsplash.jpg",
         title: "Village",
         photographer: "R.D. Smith",
-        category: "New Arrival",
+        category: "fashion",
         bestseller: false,
+        newarrival: true,
         sizes: [
             {
                 size: "small",
@@ -54,8 +56,9 @@ export const PRODUCTS = [
         src: "./assets/claudio-schwarz-purzlbaum-IGS9e0pAaJc-unsplash.jpg",
         title: "Road",
         photographer: "Claudio Schwarz",
-        category: "New Arrival",
+        category: "nature",
         bestseller: false,
+        newarrival: true,
         sizes: [
             {
                 size: "small",
@@ -79,8 +82,9 @@ export const PRODUCTS = [
         src: "./assets/ashkan-forouzani-m0l9NBCivuk-unsplash.jpg",
         title: "Wall",
         photographer: "Ashkan Forouzani",
-        category: "Patterns",
+        category: "patterns",
         bestseller: true,
+        newarrival: false,
         sizes: [
             {
                 size: "small",
@@ -104,8 +108,9 @@ export const PRODUCTS = [
         src: "./assets/freestocks-VFrcRtEQKL8-unsplash.jpg",
         title: "Fashion Week",
         photographer: "Michael Angelo",
-        category: "Patterns",
+        category: "patterns",
         bestseller: true,
+        newarrival: false,
         sizes: [
             {
                 size: "small",
@@ -129,8 +134,9 @@ export const PRODUCTS = [
         src: "./assets/guille-pozzi-SHcHVFhz7-M-unsplash.jpg",
         title: "Stary Night",
         photographer: "Guille Pozze",
-        category: "Patterns",
+        category: "patterns",
         bestseller: true,
+        newarrival: false,
         sizes: [
             {
                 size: "small",
@@ -154,8 +160,9 @@ export const PRODUCTS = [
         src: "./assets/bekir-donmez-eofm5R5f9Kw-unsplash.jpg",
         title: "Zen",
         photographer: "Bekir Donmez",
-        category: "Patterns",
+        category: "patterns",
         bestseller: true,
+        newarrival: false,
         sizes: [
             {
                 size: "small",
