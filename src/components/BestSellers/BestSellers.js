@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { PRODUCTS as products } from "../../../data";
+import { PRODUCTS as products } from "../../data";
 
 import BestSeller from "./BestSeller";
 
@@ -31,6 +31,7 @@ const BestSellers = () => {
                 if (product.bestseller) {
                     return <BestSeller key={product.title} product={product} />;
                 }
+                return null;
             })}
         </BestSellersContainer>
     );

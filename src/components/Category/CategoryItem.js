@@ -24,12 +24,6 @@ const CategoryImage = styled(motion.div)`
     background-size: cover;
 `;
 
-const CategoryItemImage = styled.img`
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-`;
-
 const CategoryItemHoverBG = styled(motion.div)`
     position: absolute;
     top: 0;
@@ -144,7 +138,10 @@ const CategoryItem = (props) => {
                 >
                     {props.product.sizes.map((size) => {
                         return (
-                            <motion.li variants={staggerVariants}>
+                            <motion.li
+                                key={size.size}
+                                variants={staggerVariants}
+                            >
                                 {size.size} <span>{size.price}</span>
                             </motion.li>
                         );

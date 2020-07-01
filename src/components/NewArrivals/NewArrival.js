@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { motion, useCycle } from "framer-motion";
 
@@ -84,7 +84,7 @@ const staggerVariants = {
         y: 0,
         transition: {
             staggerChildren: 0.15,
-            delayChildren: 0.15,
+            delayChildren: 0.05,
             ease: "easeInOut",
             duration: 0.6,
         },
@@ -126,6 +126,12 @@ const imageVariants = {
 const NewArrival = (props) => {
     const [isOpen, toggleOpen] = useCycle(false, true);
 
+    const addProduct = (e) => {
+        e.preventDefault();
+
+        console.log(e);
+    };
+
     return (
         <NewArrivalContainer
             onHoverStart={() => toggleOpen()}
@@ -161,7 +167,11 @@ const NewArrival = (props) => {
                     variants={staggerVariants}
                 >
                     {props.product.sizes.map((size) => (
-                        <motion.li variants={staggerVariants}>
+                        <motion.li
+                            key={size.size}
+                            variants={staggerVariants}
+                            onClick={(e) => addProduct(e)}
+                        >
                             {size.size} - ${size.price}
                         </motion.li>
                     ))}

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { PRODUCTS as products } from "../../../data";
+import { PRODUCTS as products } from "../../data";
 
 import NewArrival from "./NewArrival";
 
@@ -21,6 +21,7 @@ const NewArrivals = () => {
                 if (product.newarrival) {
                     return <NewArrival key={product.title} product={product} />;
                 }
+                return null;
             })}
         </NewArrivalsContainer>
     );

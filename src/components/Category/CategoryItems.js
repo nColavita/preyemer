@@ -16,8 +16,9 @@ const CategoryItems = (props) => {
         <CategoryItemsContainer>
             {products.map((product) => {
                 if (props.category === product.category) {
-                    return <CategoryItem product={product} />;
+                    return <CategoryItem key={product.id} product={product} />;
                 }
+                return null;
             })}
         </CategoryItemsContainer>
     );

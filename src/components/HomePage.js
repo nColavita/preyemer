@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import NewArrivals from "../components/Products/NewArrivals/NewArrivals";
-import BestSellers from "../components/Products/BestSellers/BestSellers";
+import NewArrivals from "./NewArrivals/NewArrivals";
+import BestSellers from "./BestSellers/BestSellers";
 
 const HomePageContainer = styled.div``;
 

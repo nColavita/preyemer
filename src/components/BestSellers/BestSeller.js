@@ -124,7 +124,7 @@ const BestSeller = (props) => {
                     <ul>
                         {props.product.sizes.map((size) => {
                             return (
-                                <li>
+                                <li key={size.size}>
                                     {size.size} - ${size.price}
                                 </li>
                             );
