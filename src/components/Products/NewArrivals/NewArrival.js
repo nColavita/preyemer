@@ -73,7 +73,7 @@ const NewArrivalBG = styled(motion.div)`
 // *** Logic *** //
 const footerVariants = {
     closed: { y: "200px" },
-    open: { y: "0", delay: 0.25 },
+    open: { y: "0", delay: 0.25, transition: { ease: "easeInOut" } },
 };
 const bgVariants = {
     closed: { opacity: 0 },

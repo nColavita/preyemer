@@ -3,12 +3,17 @@ import styled from "styled-components";
 import { motion, useCycle } from "framer-motion";
 
 const CategoryItemContainer = styled(motion.div)`
+    cursor: pointer;
     position: relative;
     width: 450px;
     height: 350px;
-    cursor: pointer;
-    background-color: darkmagenta;
     overflow: hidden;
+
+    /* background-color: darkmagenta; */
+    background-image: url(${(props) => `../${props.image}`});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 `;
 
 const CategoryItemImage = styled.img`
@@ -21,12 +26,13 @@ const CategoryItemHoverBG = styled(motion.div)`
     position: absolute;
     top: 0;
     left: 0;
-    width: 450px;
+    width: 100%;
     height: 350px;
     background: rgba(0, 0, 0, 0.85);
 `;
 
 const CategoryItemContentContainer = styled(motion.div)`
+    position: absolute;
     width: 100%;
     height: 350px;
     color: white;
@@ -38,14 +44,17 @@ const CategoryItemContentContainer = styled(motion.div)`
     }
 
     h2 {
+        font-size: 1em;
         font-weight: 200;
     }
 
     h2 span {
+        font-size: 1.5em;
         font-weight: 600;
     }
 
     ul {
+        width: 70%;
         margin: 55px 0;
     }
 
@@ -81,15 +90,16 @@ const CategoryItem = (props) => {
 
     return (
         <CategoryItemContainer
+            image={props.product.src}
+            isOpen={isOpen}
             onHoverStart={() => toggleOpen()}
             onHoverEnd={() => toggleOpen()}
         >
-            {/* <CategoryItemImage src={`../${props.product.src}`} alt="" /> */}
-            {/* <CategoryItemHoverBG
+            <CategoryItemHoverBG
                 initial={false}
                 animate={isOpen ? "open" : "closed"}
-                variants={bgVariants}
-            /> */}
+                variants={showVariants}
+            />
             <CategoryItemContentContainer>
                 <motion.h1
                     initial={false}
@@ -116,7 +126,7 @@ const CategoryItem = (props) => {
                     animate={isOpen ? "open" : "closed"}
                     variants={showVariants}
                 >
-                    shot by <span>{props.product.photographer}</span>
+                    shot by: <span>{props.product.photographer}</span>
                 </motion.h2>
             </CategoryItemContentContainer>
         </CategoryItemContainer>
