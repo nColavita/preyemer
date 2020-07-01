@@ -1,11 +1,9 @@
 import React from "react";
 
+import Category from "./Category/Category";
+
 const PatternsPage = () => {
-    return (
-        <div>
-            <h1>Patterns Page</h1>
-        </div>
-    );
+    return <Category category="patterns" />;
 };
 
 export default PatternsPage;

@@ -1,11 +1,9 @@
 import React from "react";
 
+import Category from "./Category/Category";
+
 const NaturePage = () => {
-    return (
-        <div>
-            <h1>Nature Page</h1>
-        </div>
-    );
+    return <Category category="nature" />;
 };
 
 export default NaturePage;

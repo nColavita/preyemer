@@ -1,10 +1,10 @@
 export const PRODUCTS = [
     {
         id: 1,
-        src: "./assets/mike-von-TPUGbQmyVwE-unsplash.jpg",
-        title: "Orange Wall",
-        photographer: "Mike Von",
-        category: "fashion",
+        src: "./assets/allec-gomes-on-feed-818KAKBDgfg-unsplash.jpg",
+        title: "Paint",
+        photographer: "Allec Gomes",
+        category: "patterns",
         bestseller: false,
         newarrival: true,
         sizes: [
@@ -27,9 +27,9 @@ export const PRODUCTS = [
     },
     {
         id: 2,
-        src: "./assets/r-d-smith-c5zM69wIMCE-unsplash.jpg",
-        title: "Village",
-        photographer: "R.D. Smith",
+        src: "./assets/analise-benevides-vmzSF9x8Dfw-unsplash.jpg",
+        title: "Bride to Be",
+        photographer: "Analise Benevides",
         category: "fashion",
         bestseller: false,
         newarrival: true,
@@ -53,10 +53,10 @@ export const PRODUCTS = [
     },
     {
         id: 3,
-        src: "./assets/claudio-schwarz-purzlbaum-IGS9e0pAaJc-unsplash.jpg",
-        title: "Road",
-        photographer: "Claudio Schwarz",
-        category: "nature",
+        src: "./assets/ashkan-forouzani-m0l9NBCivuk-unsplash.jpg",
+        title: "Puzzle",
+        photographer: "Ashkan Forouzani",
+        category: "patterns",
         bestseller: false,
         newarrival: true,
         sizes: [
@@ -79,10 +79,10 @@ export const PRODUCTS = [
     },
     {
         id: 4,
-        src: "./assets/ashkan-forouzani-m0l9NBCivuk-unsplash.jpg",
+        src: "./assets/atikh-bana-_KaMTEmJnxY-unsplash.jpg",
         title: "Wall",
-        photographer: "Ashkan Forouzani",
-        category: "patterns",
+        photographer: "Atikhn Bana",
+        category: "fashion",
         bestseller: true,
         newarrival: false,
         sizes: [
@@ -105,10 +105,10 @@ export const PRODUCTS = [
     },
     {
         id: 5,
-        src: "./assets/freestocks-VFrcRtEQKL8-unsplash.jpg",
-        title: "Fashion Week",
-        photographer: "Michael Angelo",
-        category: "patterns",
+        src: "./assets/campbell-boulanger-2I_KX9NYVPs-unsplash.jpg",
+        title: "Winter Hanging",
+        photographer: "Campbell Boulanger",
+        category: "fashion",
         bestseller: true,
         newarrival: false,
         sizes: [
@@ -131,10 +131,10 @@ export const PRODUCTS = [
     },
     {
         id: 6,
-        src: "./assets/guille-pozzi-SHcHVFhz7-M-unsplash.jpg",
-        title: "Stary Night",
-        photographer: "Guille Pozze",
-        category: "patterns",
+        src: "./assets/christian-holzinger-cHseFTbvv_k-unsplash.jpg",
+        title: "Lonely Island",
+        photographer: "Christian Holzinger",
+        category: "nature",
         bestseller: true,
         newarrival: false,
         sizes: [
@@ -157,11 +157,297 @@ export const PRODUCTS = [
     },
     {
         id: 7,
-        src: "./assets/bekir-donmez-eofm5R5f9Kw-unsplash.jpg",
-        title: "Zen",
-        photographer: "Bekir Donmez",
-        category: "patterns",
+        src: "./assets/devn-TJDvP6xm2Eo-unsplash.jpg",
+        title: "Gen Z",
+        photographer: "Devn",
+        category: "fashion",
         bestseller: true,
+        newarrival: false,
+        sizes: [
+            {
+                size: "small",
+                price: "39.99",
+                dimensions: "12inx12in",
+            },
+            {
+                size: "medium",
+                price: "49.99",
+                dimensions: "24inx24in",
+            },
+            {
+                size: "large",
+                price: "59.99",
+                dimensions: "48inx48in",
+            },
+        ],
+    },
+    {
+        id: 8,
+        src: "./assets/greg-nunes-hmzKoapQuYY-unsplash.jpg",
+        title: "Home",
+        photographer: "Greg Nunes",
+        category: "nature",
+        bestseller: false,
+        newarrival: false,
+        sizes: [
+            {
+                size: "small",
+                price: "39.99",
+                dimensions: "12inx12in",
+            },
+            {
+                size: "medium",
+                price: "49.99",
+                dimensions: "24inx24in",
+            },
+            {
+                size: "large",
+                price: "59.99",
+                dimensions: "48inx48in",
+            },
+        ],
+    },
+    {
+        id: 9,
+        src: "./assets/guillermo-ferla-e4Yv_AWY2W4-unsplash.jpg",
+        title: "Full Moon",
+        photographer: "Guillermo Ferla",
+        category: "nature",
+        bestseller: false,
+        newarrival: false,
+        sizes: [
+            {
+                size: "small",
+                price: "39.99",
+                dimensions: "12inx12in",
+            },
+            {
+                size: "medium",
+                price: "49.99",
+                dimensions: "24inx24in",
+            },
+            {
+                size: "large",
+                price: "59.99",
+                dimensions: "48inx48in",
+            },
+        ],
+    },
+    {
+        id: 10,
+        src: "./assets/james-shepperdley-0gKCRBt1h1Y-unsplash.jpg",
+        title: "Airplane",
+        photographer: "James Shepperdley",
+        category: "patterns",
+        bestseller: false,
+        newarrival: false,
+        sizes: [
+            {
+                size: "small",
+                price: "39.99",
+                dimensions: "12inx12in",
+            },
+            {
+                size: "medium",
+                price: "49.99",
+                dimensions: "24inx24in",
+            },
+            {
+                size: "large",
+                price: "59.99",
+                dimensions: "48inx48in",
+            },
+        ],
+    },
+    {
+        id: 11,
+        src: "./assets/juno-jo-jbBSP5g5tPk-unsplash.jpg",
+        title: "Red Carpet",
+        photographer: "Juno Jo",
+        category: "fashion",
+        bestseller: false,
+        newarrival: false,
+        sizes: [
+            {
+                size: "small",
+                price: "39.99",
+                dimensions: "12inx12in",
+            },
+            {
+                size: "medium",
+                price: "49.99",
+                dimensions: "24inx24in",
+            },
+            {
+                size: "large",
+                price: "59.99",
+                dimensions: "48inx48in",
+            },
+        ],
+    },
+    {
+        id: 12,
+        src: "./assets/lukasz-szmigiel-mMpOinVjdkA-unsplash.jpg",
+        title: "Hillside",
+        photographer: "Lukasz Szmigiel",
+        category: "nature",
+        bestseller: false,
+        newarrival: false,
+        sizes: [
+            {
+                size: "small",
+                price: "39.99",
+                dimensions: "12inx12in",
+            },
+            {
+                size: "medium",
+                price: "49.99",
+                dimensions: "24inx24in",
+            },
+            {
+                size: "large",
+                price: "59.99",
+                dimensions: "48inx48in",
+            },
+        ],
+    },
+    {
+        id: 13,
+        src: "./assets/martin-brechtl-FBr_j08ZR1A-unsplash.jpg",
+        title: "Mountain Top",
+        photographer: "Martin Brechtl",
+        category: "nature",
+        bestseller: false,
+        newarrival: false,
+        sizes: [
+            {
+                size: "small",
+                price: "39.99",
+                dimensions: "12inx12in",
+            },
+            {
+                size: "medium",
+                price: "49.99",
+                dimensions: "24inx24in",
+            },
+            {
+                size: "large",
+                price: "59.99",
+                dimensions: "48inx48in",
+            },
+        ],
+    },
+    {
+        id: 14,
+        src: "./assets/mohamad-mahdi-abbasi-X5ECu9pqJFQ-unsplash.jpg",
+        title: "Dome",
+        photographer: "Mohama Mahdi",
+        category: "patterns",
+        bestseller: false,
+        newarrival: false,
+        sizes: [
+            {
+                size: "small",
+                price: "39.99",
+                dimensions: "12inx12in",
+            },
+            {
+                size: "medium",
+                price: "49.99",
+                dimensions: "24inx24in",
+            },
+            {
+                size: "large",
+                price: "59.99",
+                dimensions: "48inx48in",
+            },
+        ],
+    },
+    {
+        id: 15,
+        src: "./assets/rachael-ren-Ueu_6ZrVb80-unsplash.jpg",
+        title: "Timeless Kicks",
+        photographer: "Rachael Ren",
+        category: "fashion",
+        bestseller: false,
+        newarrival: false,
+        sizes: [
+            {
+                size: "small",
+                price: "39.99",
+                dimensions: "12inx12in",
+            },
+            {
+                size: "medium",
+                price: "49.99",
+                dimensions: "24inx24in",
+            },
+            {
+                size: "large",
+                price: "59.99",
+                dimensions: "48inx48in",
+            },
+        ],
+    },
+    {
+        id: 16,
+        src: "./assets/surendra-singh-jhYmzcH9eSI-unsplash.jpg",
+        title: "Spiral Support",
+        photographer: "Surendra Singh",
+        category: "patterns",
+        bestseller: false,
+        newarrival: false,
+        sizes: [
+            {
+                size: "small",
+                price: "39.99",
+                dimensions: "12inx12in",
+            },
+            {
+                size: "medium",
+                price: "49.99",
+                dimensions: "24inx24in",
+            },
+            {
+                size: "large",
+                price: "59.99",
+                dimensions: "48inx48in",
+            },
+        ],
+    },
+    {
+        id: 17,
+        src: "./assets/tatonomusic-ca9kLXBJMrM-unsplash.jpg",
+        title: "Island Paradise",
+        photographer: "John Doe",
+        category: "nature",
+        bestseller: false,
+        newarrival: false,
+        sizes: [
+            {
+                size: "small",
+                price: "39.99",
+                dimensions: "12inx12in",
+            },
+            {
+                size: "medium",
+                price: "49.99",
+                dimensions: "24inx24in",
+            },
+            {
+                size: "large",
+                price: "59.99",
+                dimensions: "48inx48in",
+            },
+        ],
+    },
+    {
+        id: 18,
+        src: "./assets/valentin-lacoste-6OiHO4CnSgI-unsplash.jpg",
+        title: "Dots on Dots",
+        photographer: "Valentin Lacoste",
+        category: "patterns",
+        bestseller: false,
         newarrival: false,
         sizes: [
             {
