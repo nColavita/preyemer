@@ -71,7 +71,7 @@ const CategoryItemContentContainer = styled(motion.div)`
         list-style-type: none;
         font-size: 2em;
         &:hover {
-            font-weight: 600;
+            color: yellow;
         }
     }
 

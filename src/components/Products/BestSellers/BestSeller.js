@@ -7,7 +7,6 @@ const BestSellerContainer = styled(motion.div)`
     position: relative;
     width: 180px;
     height: 150px;
-    background-color: darkkhaki;
     overflow: hidden;
 `;
 
@@ -46,7 +45,7 @@ const BestSellerContent = styled(motion.div)`
         font-weight: bold;
 
         &:hover {
-            font-weight: normal;
+            color: #6636a8;
         }
     }
 
@@ -102,6 +101,7 @@ const BestSeller = (props) => {
             initial={false}
             animate={isOpen ? "open" : "closed"}
             variants={scaleVariants}
+            transition={{ ease: "easeInOut" }}
         >
             <BestSellerHoverContainer
                 initial={false}

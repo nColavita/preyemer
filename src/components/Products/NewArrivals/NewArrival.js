@@ -11,7 +11,7 @@ const NewArrivalContainer = styled(motion.div)`
     height: 300px;
 `;
 
-const NewArrivalImage = styled.img`
+const NewArrivalImage = styled(motion.img)`
     width: 100%;
     height: 300px;
     object-fit: cover;
@@ -38,7 +38,7 @@ const NewArrivalFooter = styled(motion.div)`
         font-size: 0.95em;
 
         &:hover {
-            font-weight: bold;
+            color: #6636a8;
         }
     }
 
@@ -61,23 +61,65 @@ const NewArrivalFooter = styled(motion.div)`
     }
 `;
 
-const NewArrivalBG = styled(motion.div)`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 300px;
-    background-color: rgba(0, 0, 0, 0.75);
-`;
-
 // *** Logic *** //
 const footerVariants = {
-    closed: { y: "200px" },
-    open: { y: "0", delay: 0.25, transition: { ease: "easeInOut" } },
+    closed: { y: "125px", transition: { duration: 0.45, delay: 0.2 } },
+    open: {
+        y: "0",
+        transition: { ease: "easeInOut", duration: 0.45 },
+    },
 };
-const bgVariants = {
-    closed: { opacity: 0 },
-    open: { opacity: 1 },
+
+const staggerVariants = {
+    closed: {
+        y: "125px",
+        transition: {
+            staggerChildren: 0.15,
+            staggerDirection: -1,
+            ease: "easeInOut",
+            duration: 0.6,
+        },
+    },
+    open: {
+        y: 0,
+        transition: {
+            staggerChildren: 0.15,
+            delayChildren: 0.15,
+            ease: "easeInOut",
+            duration: 0.6,
+        },
+    },
+};
+const staggerVariants__2 = {
+    closed: {
+        y: "100px",
+        transition: {
+            staggerChildren: 0.15,
+            staggerDirection: -1,
+            ease: "easeInOut",
+            duration: 0.35,
+        },
+    },
+    open: {
+        y: 0,
+        transition: {
+            staggerChildren: 0.15,
+            delayChildren: 0.15,
+            ease: "easeInOut",
+            duration: 0.35,
+        },
+    },
+};
+
+const imageVariants = {
+    open: {
+        y: "-80px",
+        transition: { ease: "easeInOut", duration: 0.5, delay: 0.1 },
+    },
+    closed: {
+        y: "0",
+        transition: { ease: "easeInOut", duration: 0.5 },
+    },
 };
 
 // *** Component *** //
@@ -89,31 +131,42 @@ const NewArrival = (props) => {
             onHoverStart={() => toggleOpen()}
             onHoverEnd={() => toggleOpen()}
         >
-            <NewArrivalBG
+            <NewArrivalImage
                 initial={false}
                 animate={isOpen ? "open" : "closed"}
-                variants={bgVariants}
-            />
+                variants={imageVariants}
+                src={`./${props.product.src}`}
+            ></NewArrivalImage>
+
             <NewArrivalFooter
                 initial={false}
                 animate={isOpen ? "open" : "closed"}
                 variants={footerVariants}
             >
-                <div>
-                    <h1>{props.product.title}</h1>
-                    <h2>
+                <motion.div
+                    initial={false}
+                    animate={isOpen ? "open" : "closed"}
+                    variants={staggerVariants__2}
+                >
+                    <motion.h1 variants={staggerVariants__2}>
+                        {props.product.title}
+                    </motion.h1>
+                    <motion.h2 variants={staggerVariants__2}>
                         Shot by: <span>{props.product.photographer}</span>
-                    </h2>
-                </div>
-                <ul>
+                    </motion.h2>
+                </motion.div>
+                <motion.ul
+                    initial={false}
+                    animate={isOpen ? "open" : "closed"}
+                    variants={staggerVariants}
+                >
                     {props.product.sizes.map((size) => (
-                        <li>
+                        <motion.li variants={staggerVariants}>
                             {size.size} - ${size.price}
-                        </li>
+                        </motion.li>
                     ))}
-                </ul>
+                </motion.ul>
             </NewArrivalFooter>
-            <NewArrivalImage src={`./${props.product.src}`}></NewArrivalImage>
         </NewArrivalContainer>
     );
 };

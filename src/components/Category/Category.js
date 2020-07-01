@@ -8,9 +8,9 @@ const handleBGColor = (category) => {
         case "fashion":
             return "#94519A";
         case "nature":
-            return "##519A51";
+            return "#519A51";
         case "patterns":
-            return "##51849A";
+            return "#51849A";
         default:
             return "none";
     }
