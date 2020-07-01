@@ -5,8 +5,8 @@ import { motion, useCycle } from "framer-motion";
 const BestSellerContainer = styled(motion.div)`
     cursor: pointer;
     position: relative;
-    width: 185px;
-    height: 155px;
+    width: 180px;
+    height: 150px;
     background-color: darkkhaki;
     overflow: hidden;
 `;
@@ -18,8 +18,8 @@ const BestSellerHoverContainer = styled(motion.div)`
     align-items: center;
     top: 0;
     left: 0;
-    width: 185px;
-    height: 155px;
+    width: 180px;
+    height: 150px;
 
     background-color: rgba(0, 0, 0, 0.85);
 `;
@@ -87,6 +87,10 @@ const frameConentVariants = {
     closed: { opacity: 0 },
     open: { opacity: 1 },
 };
+const scaleVariants = {
+    closed: { scale: 1 },
+    open: { scale: 1.2 },
+};
 
 const BestSeller = (props) => {
     const [isOpen, toggleOpen] = useCycle(false, true);
@@ -95,6 +99,9 @@ const BestSeller = (props) => {
         <BestSellerContainer
             onHoverStart={() => toggleOpen()}
             onHoverEnd={() => toggleOpen()}
+            initial={false}
+            animate={isOpen ? "open" : "closed"}
+            variants={scaleVariants}
         >
             <BestSellerHoverContainer
                 initial={false}
@@ -105,7 +112,7 @@ const BestSeller = (props) => {
                     initial={false}
                     animate={isOpen ? "open" : "closed"}
                     variants={frameVariants}
-                    transition={{ type: "tween", duration: 0.15, delay: 0.15 }}
+                    transition={{ type: "tween", duration: 0.15, delay: 0.1 }}
                 />
                 <BestSellerContent
                     initial={false}
@@ -127,8 +134,7 @@ const BestSeller = (props) => {
                 </BestSellerContent>
             </BestSellerHoverContainer>
 
-            <BestSellerImg src={``}></BestSellerImg>
-            {/* <BestSellerImg src={`./${props.product.src}`}></BestSellerImg> */}
+            <BestSellerImg src={`./${props.product.src}`}></BestSellerImg>
         </BestSellerContainer>
     );
 };

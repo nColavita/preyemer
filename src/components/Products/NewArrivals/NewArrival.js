@@ -113,8 +113,7 @@ const NewArrival = (props) => {
                     ))}
                 </ul>
             </NewArrivalFooter>
-            {/* <NewArrivalImage src={`./${props.product.src}`}></NewArrivalImage> */}
-            <NewArrivalImage src={``}></NewArrivalImage>
+            <NewArrivalImage src={`./${props.product.src}`}></NewArrivalImage>
         </NewArrivalContainer>
     );
 };

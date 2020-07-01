@@ -24,9 +24,29 @@ const CategoryContainer = styled.div`
     position: relative;
 `;
 
+const CategoryBG = styled.div`
+    position: absolute;
+    width: 75%;
+    max-width: 800px;
+    height: 100vh;
+    background-color: ${({ category }) => {
+        switch (category) {
+            case "fashion":
+                return "#94519A";
+            case "nature":
+                return "#519A51";
+            case "patterns":
+                return "#51849A";
+            default:
+                return "none";
+        }
+    }};
+`;
+
 const Category = (props) => {
     return (
         <CategoryContainer>
+            <CategoryBG category={props.category} />
             <CategoryItems category={props.category} />
         </CategoryContainer>
     );
