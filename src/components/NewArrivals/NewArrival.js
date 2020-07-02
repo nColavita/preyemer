@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { motion, useCycle } from "framer-motion";
 
@@ -126,10 +126,18 @@ const imageVariants = {
 const NewArrival = (props) => {
     const [isOpen, toggleOpen] = useCycle(false, true);
 
-    const addProduct = (e) => {
+    const addProduct = (product, size, e) => {
         e.preventDefault();
 
-        console.log(e);
+        const productPayload = {
+            title: product.title,
+            size: size,
+            // price: product.size.price,
+        };
+
+        // console.log(product);
+        // console.log(size);
+        console.log(productPayload);
     };
 
     return (
@@ -170,7 +178,9 @@ const NewArrival = (props) => {
                         <motion.li
                             key={size.size}
                             variants={staggerVariants}
-                            onClick={(e) => addProduct(e)}
+                            onClick={(e) =>
+                                addProduct(props.product, size.size, e)
+                            }
                         >
                             {size.size} - ${size.price}
                         </motion.li>

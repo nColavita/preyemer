@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import styled from "styled-components";
 
-import { Provider } from "./context";
+import { GlobalProvider } from "./context/GlobalContext";
 
 import Nav from "./components/Nav/Nav";
 import SiteNav from "./components/SiteNav/SiteNav";
@@ -24,7 +24,7 @@ const Container = styled.div`
 
 const App = () => {
     return (
-        <Provider>
+        <GlobalProvider>
             <Router>
                 <Container>
                     <Nav />
@@ -60,7 +60,7 @@ const App = () => {
                     </Switch>
                 </Container>
             </Router>
-        </Provider>
+        </GlobalProvider>
     );
 };
 
