@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+
+import { GlobalContext } from "../../context/GlobalContext";
 
 import ShoppingCart from "./ShoppingCart";
 import PayNow from "./PayNow";
@@ -11,10 +13,12 @@ const CheckoutContainer = styled.div`
 `;
 
 const Checkout = () => {
+    const { cart } = useContext(GlobalContext);
+
     return (
         <CheckoutContainer>
-            <ShoppingCart />
-            <PayNow />
+            <ShoppingCart cart={cart} />
+            <PayNow cart={cart} />
         </CheckoutContainer>
     );
 };

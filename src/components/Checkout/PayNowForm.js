@@ -34,7 +34,7 @@ const Form = styled.form`
 const PayNowForm = (props) => {
     return (
         <Form>
-            <label>
+            {/* <label>
                 <h1>Name:</h1>
                 <input type="text" name="name" id="" placeholder="First Name" />
             </label>
@@ -62,7 +62,7 @@ const PayNowForm = (props) => {
                 />
             </label>
 
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" /> */}
         </Form>
     );
 };

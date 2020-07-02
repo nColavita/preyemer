@@ -13,8 +13,16 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = ({ children }) => {
     const [state, dispatch] = useReducer(ShoppingCartReducer, initialState);
 
+    // Actions
+    function addProductToCart(item) {
+        dispatch({
+            type: "ADD_TO_CART",
+            payload: item,
+        });
+    }
+
     return (
-        <GlobalContext.Provider value={{ cart: state.cart }}>
+        <GlobalContext.Provider value={{ cart: state.cart, addProductToCart }}>
             {children}
         </GlobalContext.Provider>
     );

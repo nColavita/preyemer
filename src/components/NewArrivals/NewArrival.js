@@ -35,7 +35,7 @@ const imageVariants = {
 const NewArrival = (props) => {
     const [isOpen, toggleOpen] = useCycle(false, true);
 
-    const { cart } = useContext(GlobalContext);
+    const { addProductToCart } = useContext(GlobalContext);
 
     const addProduct = (product, selectedSize, e) => {
         e.preventDefault();
@@ -47,7 +47,8 @@ const NewArrival = (props) => {
             price: product.sizes.find((size) => size.size === selectedSize)
                 .price,
         };
-        console.log(productPayload);
+
+        addProductToCart(productPayload);
     };
 
     return (

@@ -65,7 +65,7 @@ export const CategoryItemContent = (props) => {
                             key={size.size}
                             variants={props.staggerVariants}
                         >
-                            {size.size} <span>{size.price}</span>
+                            {size.size} <span>${size.price}</span>
                         </motion.li>
                     );
                 })}
