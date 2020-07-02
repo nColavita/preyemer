@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { motion, useCycle } from "framer-motion";
 
+import BestSellerContent from "./BestSellerContent";
+
 const BestSellerContainer = styled(motion.div)`
     cursor: pointer;
     position: relative;
@@ -21,47 +23,6 @@ const BestSellerHoverContainer = styled(motion.div)`
     height: 150px;
 
     background-color: rgba(0, 0, 0, 0.85);
-`;
-
-const BestSellerContent = styled(motion.div)`
-    color: white;
-    font-weight: 200;
-    width: 160px;
-    height: 135px;
-    padding: 10px;
-    position: relative;
-
-    text-align: center;
-
-    ul {
-        text-align: left;
-        list-style-type: none;
-        margin-left: 5px;
-    }
-
-    li {
-        margin: 5px 0;
-        font-size: 0.7em;
-        font-weight: bold;
-
-        &:hover {
-            color: #6636a8;
-        }
-    }
-
-    h1 {
-        margin-bottom: 15px;
-        font-size: 1em;
-    }
-
-    h2 {
-        font-size: 0.7em;
-        font-weight: 400;
-        text-align: left;
-        position: absolute;
-        left: 15px;
-        bottom: 15px;
-    }
 `;
 
 const BestSellerImg = styled.img`
@@ -115,23 +76,10 @@ const BestSeller = (props) => {
                     transition={{ type: "tween", duration: 0.15, delay: 0.1 }}
                 />
                 <BestSellerContent
-                    initial={false}
-                    animate={isOpen ? "open" : "closed"}
+                    isOpen={isOpen}
                     variants={frameConentVariants}
-                    transition={{ delay: 0.15 }}
-                >
-                    <h1>{props.product.title}</h1>
-                    <ul>
-                        {props.product.sizes.map((size) => {
-                            return (
-                                <li key={size.size}>
-                                    {size.size} - ${size.price}
-                                </li>
-                            );
-                        })}
-                    </ul>
-                    <h2>{props.product.photographer}</h2>
-                </BestSellerContent>
+                    product={props.product}
+                />
             </BestSellerHoverContainer>
 
             <BestSellerImg src={`./${props.product.src}`}></BestSellerImg>

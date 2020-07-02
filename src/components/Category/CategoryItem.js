@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { motion, useCycle } from "framer-motion";
 
+import CategoryItemContent from "./CategoryItemContent";
+
 const CategoryItemContainer = styled(motion.div)`
     cursor: pointer;
     position: relative;
@@ -31,48 +33,6 @@ const CategoryItemHoverBG = styled(motion.div)`
     width: 100%;
     height: 350px;
     background: rgba(0, 0, 0, 0.85);
-`;
-
-const CategoryItemContentContainer = styled(motion.div)`
-    position: absolute;
-    width: 100%;
-    height: 350px;
-    color: white;
-    font-weight: 200;
-    padding: 25px;
-
-    h1 {
-        font-size: 3em;
-        font-weight: 200;
-    }
-
-    h2 {
-        font-size: 1em;
-        font-weight: 200;
-    }
-
-    h2 span {
-        font-size: 1.5em;
-        font-weight: 600;
-    }
-
-    ul {
-        width: 70%;
-        margin: 55px 0;
-    }
-
-    li {
-        list-style-type: none;
-        font-size: 2em;
-        &:hover {
-            color: yellow;
-        }
-    }
-
-    li span {
-        font-weight: 600;
-        margin-left: 15px;
-    }
 `;
 
 const scaleVariants = {
@@ -123,38 +83,12 @@ const CategoryItem = (props) => {
                 animate={isOpen ? "open" : "closed"}
                 variants={showVariants}
             />
-            <CategoryItemContentContainer>
-                <motion.h1
-                    initial={false}
-                    animate={isOpen ? "open" : "closed"}
-                    variants={showVariants}
-                >
-                    {props.product.title}
-                </motion.h1>
-                <motion.ul
-                    initial={false}
-                    animate={isOpen ? "open" : "closed"}
-                    variants={staggerVariants}
-                >
-                    {props.product.sizes.map((size) => {
-                        return (
-                            <motion.li
-                                key={size.size}
-                                variants={staggerVariants}
-                            >
-                                {size.size} <span>{size.price}</span>
-                            </motion.li>
-                        );
-                    })}
-                </motion.ul>
-                <motion.h2
-                    initial={false}
-                    animate={isOpen ? "open" : "closed"}
-                    variants={showVariants}
-                >
-                    shot by: <span>{props.product.photographer}</span>
-                </motion.h2>
-            </CategoryItemContentContainer>
+            <CategoryItemContent
+                isOpen={isOpen}
+                showVariants={showVariants}
+                staggerVariants={staggerVariants}
+                product={props.product}
+            />
         </CategoryItemContainer>
     );
 };
