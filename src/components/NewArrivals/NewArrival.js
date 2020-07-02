@@ -1,4 +1,6 @@
 import React, { useContext } from "react";
+import { GlobalContext } from "../../context/GlobalContext";
+
 import styled from "styled-components";
 import { motion, useCycle } from "framer-motion";
 
@@ -126,17 +128,18 @@ const imageVariants = {
 const NewArrival = (props) => {
     const [isOpen, toggleOpen] = useCycle(false, true);
 
-    const addProduct = (product, size, e) => {
+    const { cart } = useContext(GlobalContext);
+
+    const addProduct = (product, selectedSize, e) => {
         e.preventDefault();
 
         const productPayload = {
             title: product.title,
-            size: size,
-            // price: product.size.price,
+            size: selectedSize,
+            image: product.src,
+            price: product.sizes.find((size) => size.size === selectedSize)
+                .price,
         };
-
-        // console.log(product);
-        // console.log(size);
         console.log(productPayload);
     };
 
@@ -174,15 +177,15 @@ const NewArrival = (props) => {
                     animate={isOpen ? "open" : "closed"}
                     variants={staggerVariants}
                 >
-                    {props.product.sizes.map((size) => (
+                    {props.product.sizes.map((item) => (
                         <motion.li
-                            key={size.size}
+                            key={item.size}
                             variants={staggerVariants}
                             onClick={(e) =>
-                                addProduct(props.product, size.size, e)
+                                addProduct(props.product, item.size, e)
                             }
                         >
-                            {size.size} - ${size.price}
+                            {item.size} - ${item.price}
                         </motion.li>
                     ))}
                 </motion.ul>
