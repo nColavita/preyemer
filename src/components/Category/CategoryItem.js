@@ -88,6 +88,7 @@ const CategoryItem = (props) => {
                 showVariants={showVariants}
                 staggerVariants={staggerVariants}
                 product={props.product}
+                addProduct={props.addProduct}
             />
         </CategoryItemContainer>
     );

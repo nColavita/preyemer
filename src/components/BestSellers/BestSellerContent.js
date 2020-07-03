@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
@@ -53,10 +53,15 @@ const BestSellerContent = (props) => {
         >
             <h1>{props.product.title}</h1>
             <ul>
-                {props.product.sizes.map((size) => {
+                {props.product.sizes.map((item) => {
                     return (
-                        <li key={size.size}>
-                            {size.size} - ${size.price}
+                        <li
+                            onClick={(e) =>
+                                props.addProduct(props.product, item.size, e)
+                            }
+                            key={item.size}
+                        >
+                            {item.size} - ${item.price}
                         </li>
                     );
                 })}

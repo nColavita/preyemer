@@ -79,6 +79,7 @@ const BestSeller = (props) => {
                     isOpen={isOpen}
                     variants={frameConentVariants}
                     product={props.product}
+                    addProduct={props.addProduct}
                 />
             </BestSellerHoverContainer>
 

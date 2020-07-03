@@ -59,13 +59,16 @@ export const CategoryItemContent = (props) => {
                 animate={props.isOpen ? "open" : "closed"}
                 variants={props.staggerVariants}
             >
-                {props.product.sizes.map((size) => {
+                {props.product.sizes.map((item) => {
                     return (
                         <motion.li
-                            key={size.size}
+                            key={item.size}
                             variants={props.staggerVariants}
+                            onClick={(e) =>
+                                props.addProduct(props.product, item.size, e)
+                            }
                         >
-                            {size.size} <span>${size.price}</span>
+                            {item.size} <span>${item.price}</span>
                         </motion.li>
                     );
                 })}
