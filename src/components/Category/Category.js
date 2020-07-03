@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import CategoryItems from "./CategoryItems";
 
@@ -11,7 +12,7 @@ const CategoryContainer = styled.div`
     position: relative;
 `;
 
-const CategoryBG = styled.div`
+const CategoryBG = styled(motion.div)`
     position: absolute;
     width: 75%;
     max-width: 800px;
@@ -33,7 +34,12 @@ const CategoryBG = styled.div`
 const Category = (props) => {
     return (
         <CategoryContainer>
-            <CategoryBG category={props.category} />
+            <CategoryBG
+                category={props.category}
+                initial={{ scale: 0.5 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.15 }}
+            />
             <CategoryItems category={props.category} />
         </CategoryContainer>
     );

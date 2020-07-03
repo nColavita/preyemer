@@ -17,12 +17,13 @@ const CategoryItemContentContainer = styled(motion.div)`
 
     h2 {
         font-size: 1em;
-        font-weight: 200;
+        font-weight: 600;
     }
 
     h2 span {
         font-size: 1.5em;
-        font-weight: 600;
+        font-weight: 200;
+        margin-left: 5px;
     }
 
     ul {

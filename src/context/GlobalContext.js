@@ -14,6 +14,8 @@ export const GlobalProvider = ({ children }) => {
     const [state, dispatch] = useReducer(GlobalReducers, initialState);
 
     // Actions
+
+    // ADD - Item
     function addProductToCart(item) {
         dispatch({
             type: "ADD_TO_CART",
@@ -25,6 +27,7 @@ export const GlobalProvider = ({ children }) => {
         e.preventDefault();
 
         const productPayload = {
+            id: Math.floor(Math.random() * 10000),
             title: product.title,
             size: selectedSize,
             image: product.src,
@@ -35,8 +38,22 @@ export const GlobalProvider = ({ children }) => {
         addProductToCart(productPayload);
     };
 
+    // REMOVE - Item
+    function removeProductfromCart(id) {
+        dispatch({
+            type: "DELETE_FROM_CART",
+            payload: id,
+        });
+    }
+
     return (
-        <GlobalContext.Provider value={{ cart: state.cart, addProductHandler }}>
+        <GlobalContext.Provider
+            value={{
+                cart: state.cart,
+                addProductHandler,
+                removeProductfromCart,
+            }}
+        >
             {children}
         </GlobalContext.Provider>
     );
