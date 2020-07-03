@@ -60,7 +60,15 @@ const ShoppingCartContainer = styled.div`
     }
 `;
 
+const NoItems = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+`;
+
 const ShoppingCart = (props) => {
+    const items = props.cart;
     const { removeProductfromCart } = useContext(GlobalContext);
 
     const deleteProductHandler = (id, e) => {
@@ -71,43 +79,57 @@ const ShoppingCart = (props) => {
 
     return (
         <ShoppingCartContainer>
-            <h1>Shopping List</h1>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Title</th>
-                        <th>Size</th>
-                        <th>Price</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {props.cart.map((item) => {
-                        return (
-                            <tr key={Math.random()}>
-                                <td>
-                                    <img src={`./${item.image}`} alt="" />
-                                </td>
-                                <td>{item.title}</td>
-                                <td>{item.size}</td>
-                                <td>${item.price}</td>
-                                <td>
-                                    <motion.button
-                                        whileTap={{ scale: 0.9 }}
-                                        onClick={(e) =>
-                                            deleteProductHandler(item.id, e)
-                                        }
-                                    >
-                                        X
-                                    </motion.button>
-                                </td>
+            {items.length > 0 ? (
+                <>
+                    <h1>Shopping List</h1>
+                    <hr />
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Title</th>
+                                <th>Size</th>
+                                <th>Price</th>
+                                <th></th>
                             </tr>
-                        );
-                    })}
-                </tbody>
-            </table>
+                        </thead>
+                        <tbody>
+                            {props.cart.map((item) => {
+                                return (
+                                    <tr key={Math.random()}>
+                                        <td>
+                                            <img
+                                                src={`./${item.image}`}
+                                                alt=""
+                                            />
+                                        </td>
+                                        <td>{item.title}</td>
+                                        <td>{item.size}</td>
+                                        <td>${item.price}</td>
+                                        <td>
+                                            <motion.button
+                                                whileTap={{ scale: 0.9 }}
+                                                onClick={(e) =>
+                                                    deleteProductHandler(
+                                                        item.id,
+                                                        e
+                                                    )
+                                                }
+                                            >
+                                                X
+                                            </motion.button>
+                                        </td>
+                                    </tr>
+                                );
+                            })}
+                        </tbody>
+                    </table>
+                </>
+            ) : (
+                <NoItems>
+                    <h1>No Items in Cart</h1>
+                </NoItems>
+            )}
         </ShoppingCartContainer>
     );
 };

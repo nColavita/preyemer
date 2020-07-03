@@ -12,6 +12,7 @@ import NaturePage from "./components/NaturePage";
 import PatternsPage from "./components/PatternsPage";
 import CheckoutPage from "./components/CheckoutPage";
 import NotFound from "./components/pages/NotFound";
+import Footer from "./components/Footer/Footer";
 
 import "./App.css";
 
@@ -26,39 +27,42 @@ const App = () => {
     return (
         <GlobalProvider>
             <Router>
-                <Container>
-                    <Nav />
-                    <SiteNav />
-                    <Switch>
-                        <Route
-                            exact
-                            path="/"
-                            render={(props) => <HomePage />}
-                        ></Route>
-                        <Route
-                            exact
-                            path="/category/fashion"
-                            render={(props) => <FashionPage />}
-                        ></Route>
-                        <Route
-                            exact
-                            path="/category/nature"
-                            render={(props) => <NaturePage />}
-                        ></Route>
-                        <Route
-                            exact
-                            path="/category/patterns"
-                            render={(props) => <PatternsPage />}
-                        ></Route>
-                        <Route
-                            exact
-                            path="/checkout"
-                            render={(props) => <CheckoutPage />}
-                        ></Route>
+                <>
+                    <Container>
+                        <Nav />
+                        <SiteNav />
+                        <Switch>
+                            <Route
+                                exact
+                                path="/"
+                                render={(props) => <HomePage />}
+                            ></Route>
+                            <Route
+                                exact
+                                path="/category/fashion"
+                                render={(props) => <FashionPage />}
+                            ></Route>
+                            <Route
+                                exact
+                                path="/category/nature"
+                                render={(props) => <NaturePage />}
+                            ></Route>
+                            <Route
+                                exact
+                                path="/category/patterns"
+                                render={(props) => <PatternsPage />}
+                            ></Route>
+                            <Route
+                                exact
+                                path="/checkout"
+                                render={(props) => <CheckoutPage />}
+                            ></Route>
 
-                        <Route component={NotFound}></Route>
-                    </Switch>
-                </Container>
+                            <Route component={NotFound}></Route>
+                        </Switch>
+                    </Container>
+                    <Footer />
+                </>
             </Router>
         </GlobalProvider>
     );
