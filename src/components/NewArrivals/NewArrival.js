@@ -35,21 +35,7 @@ const imageVariants = {
 const NewArrival = (props) => {
     const [isOpen, toggleOpen] = useCycle(false, true);
 
-    const { addProductToCart } = useContext(GlobalContext);
-
-    const addProduct = (product, selectedSize, e) => {
-        e.preventDefault();
-
-        const productPayload = {
-            title: product.title,
-            size: selectedSize,
-            image: product.src,
-            price: product.sizes.find((size) => size.size === selectedSize)
-                .price,
-        };
-
-        addProductToCart(productPayload);
-    };
+    const { addProductHandler } = useContext(GlobalContext);
 
     return (
         <NewArrivalContainer
@@ -65,7 +51,7 @@ const NewArrival = (props) => {
             <NewArrivalFooter
                 isOpen={isOpen}
                 product={props.product}
-                addProduct={addProduct}
+                addProductHandler={addProductHandler}
             />
         </NewArrivalContainer>
     );

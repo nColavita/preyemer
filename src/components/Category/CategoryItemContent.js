@@ -65,7 +65,11 @@ export const CategoryItemContent = (props) => {
                             key={item.size}
                             variants={props.staggerVariants}
                             onClick={(e) =>
-                                props.addProduct(props.product, item.size, e)
+                                props.addProductHandler(
+                                    props.product,
+                                    item.size,
+                                    e
+                                )
                             }
                         >
                             {item.size} <span>${item.price}</span>

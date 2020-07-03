@@ -57,7 +57,11 @@ const BestSellerContent = (props) => {
                     return (
                         <li
                             onClick={(e) =>
-                                props.addProduct(props.product, item.size, e)
+                                props.addProductHandler(
+                                    props.product,
+                                    item.size,
+                                    e
+                                )
                             }
                             key={item.size}
                         >

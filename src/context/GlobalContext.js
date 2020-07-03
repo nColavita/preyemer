@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from "react";
-import ShoppingCartReducer from "./ShoppingCartReducer";
+import GlobalReducers from "./GlobalReducers";
 
 // Initial state
 const initialState = {
@@ -11,7 +11,7 @@ export const GlobalContext = createContext(initialState);
 
 // Provider component
 export const GlobalProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(ShoppingCartReducer, initialState);
+    const [state, dispatch] = useReducer(GlobalReducers, initialState);
 
     // Actions
     function addProductToCart(item) {
@@ -21,8 +21,22 @@ export const GlobalProvider = ({ children }) => {
         });
     }
 
+    const addProductHandler = (product, selectedSize, e) => {
+        e.preventDefault();
+
+        const productPayload = {
+            title: product.title,
+            size: selectedSize,
+            image: product.src,
+            price: product.sizes.find((size) => size.size === selectedSize)
+                .price,
+        };
+
+        addProductToCart(productPayload);
+    };
+
     return (
-        <GlobalContext.Provider value={{ cart: state.cart, addProductToCart }}>
+        <GlobalContext.Provider value={{ cart: state.cart, addProductHandler }}>
             {children}
         </GlobalContext.Provider>
     );

@@ -14,21 +14,7 @@ const CategoryItemsContainer = styled.div`
 `;
 
 const CategoryItems = (props) => {
-    const { addProductToCart } = useContext(GlobalContext);
-
-    const addProduct = (product, selectedSize, e) => {
-        e.preventDefault();
-
-        const productPayload = {
-            title: product.title,
-            size: selectedSize,
-            image: product.src,
-            price: product.sizes.find((size) => size.size === selectedSize)
-                .price,
-        };
-
-        addProductToCart(productPayload);
-    };
+    const { addProductHandler } = useContext(GlobalContext);
 
     return (
         <CategoryItemsContainer>
@@ -38,7 +24,7 @@ const CategoryItems = (props) => {
                         <CategoryItem
                             key={product.id}
                             product={product}
-                            addProduct={addProduct}
+                            addProductHandler={addProductHandler}
                         />
                     );
                 }

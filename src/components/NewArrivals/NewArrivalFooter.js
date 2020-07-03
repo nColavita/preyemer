@@ -126,7 +126,7 @@ const NewArrivalFooter = (props) => {
                         key={item.size}
                         variants={staggerVariants}
                         onClick={(e) =>
-                            props.addProduct(props.product, item.size, e)
+                            props.addProductHandler(props.product, item.size, e)
                         }
                     >
                         {item.size} - ${item.price}
