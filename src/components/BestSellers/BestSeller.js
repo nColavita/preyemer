@@ -83,7 +83,7 @@ const BestSeller = (props) => {
                 />
             </BestSellerHoverContainer>
 
-            <BestSellerImg src={`./${props.product.src}`}></BestSellerImg>
+            <BestSellerImg src={props.product.src}></BestSellerImg>
         </BestSellerContainer>
     );
 };

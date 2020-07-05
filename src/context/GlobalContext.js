@@ -13,8 +13,10 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = ({ children }) => {
     const [state, dispatch] = useReducer(GlobalReducers, initialState);
 
-    // Actions
+    // Globals
+    const iconPath = process.env;
 
+    // Actions
     // ADD - Item
     function addProductToCart(item) {
         dispatch({
@@ -52,6 +54,7 @@ export const GlobalProvider = ({ children }) => {
                 cart: state.cart,
                 addProductHandler,
                 removeProductfromCart,
+                iconPath,
             }}
         >
             {children}

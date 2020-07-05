@@ -31,11 +31,10 @@ const imageVariants = {
     },
 };
 
-// *** Component *** //
 const NewArrival = (props) => {
     const [isOpen, toggleOpen] = useCycle(false, true);
 
-    const { addProductHandler } = useContext(GlobalContext);
+    const { addProductHandler, iconPath } = useContext(GlobalContext);
 
     return (
         <NewArrivalContainer
@@ -46,7 +45,7 @@ const NewArrival = (props) => {
                 initial={false}
                 animate={isOpen ? "open" : "closed"}
                 variants={imageVariants}
-                src={`./${props.product.src}`}
+                src={props.product.src}
             ></NewArrivalImage>
             <NewArrivalFooter
                 isOpen={isOpen}

@@ -26,7 +26,8 @@ const Container = styled.div`
 const App = () => {
     return (
         <GlobalProvider>
-            <Router>
+            {/* basename="/projects/preyemer" */}
+            <Router basename="/projects/preyemer">
                 <>
                     <Container>
                         <Nav />

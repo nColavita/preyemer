@@ -98,10 +98,7 @@ const ShoppingCart = (props) => {
                                 return (
                                     <tr key={Math.random()}>
                                         <td>
-                                            <img
-                                                src={`./${item.image}`}
-                                                alt=""
-                                            />
+                                            <img src={`${item.image}`} alt="" />
                                         </td>
                                         <td>{item.title}</td>
                                         <td>{item.size}</td>

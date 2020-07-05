@@ -36,8 +36,8 @@ const Category = (props) => {
         <CategoryContainer>
             <CategoryBG
                 category={props.category}
-                initial={{ scale: 0.5 }}
-                animate={{ scale: 1 }}
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.15 }}
             />
             <CategoryItems category={props.category} />

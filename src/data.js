@@ -1,7 +1,8 @@
 export const PRODUCTS = [
     {
         id: 1,
-        src: "./assets/allec-gomes-on-feed-818KAKBDgfg-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/allec-gomes-on-feed-818KAKBDgfg-unsplash.jpg",
         title: "Paint",
         photographer: "Allec Gomes",
         category: "patterns",
@@ -27,7 +28,8 @@ export const PRODUCTS = [
     },
     {
         id: 2,
-        src: "./assets/analise-benevides-vmzSF9x8Dfw-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/analise-benevides-vmzSF9x8Dfw-unsplash.jpg",
         title: "Bride to Be",
         photographer: "Analise Benevides",
         category: "fashion",
@@ -53,7 +55,8 @@ export const PRODUCTS = [
     },
     {
         id: 3,
-        src: "./assets/ashkan-forouzani-m0l9NBCivuk-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/ashkan-forouzani-m0l9NBCivuk-unsplash.jpg",
         title: "Puzzle",
         photographer: "Ashkan Forouzani",
         category: "patterns",
@@ -79,7 +82,8 @@ export const PRODUCTS = [
     },
     {
         id: 4,
-        src: "./assets/atikh-bana-_KaMTEmJnxY-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/atikh-bana-_KaMTEmJnxY-unsplash.jpg",
         title: "Wall",
         photographer: "Atikhn Bana",
         category: "fashion",
@@ -105,7 +109,8 @@ export const PRODUCTS = [
     },
     {
         id: 5,
-        src: "./assets/campbell-boulanger-2I_KX9NYVPs-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/campbell-boulanger-2I_KX9NYVPs-unsplash.jpg",
         title: "Winter Hanging",
         photographer: "Campbell Boulanger",
         category: "fashion",
@@ -131,7 +136,8 @@ export const PRODUCTS = [
     },
     {
         id: 6,
-        src: "./assets/christian-holzinger-cHseFTbvv_k-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/christian-holzinger-cHseFTbvv_k-unsplash.jpg",
         title: "Lonely Island",
         photographer: "Christian Holzinger",
         category: "nature",
@@ -157,7 +163,8 @@ export const PRODUCTS = [
     },
     {
         id: 7,
-        src: "./assets/devn-TJDvP6xm2Eo-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/devn-TJDvP6xm2Eo-unsplash.jpg",
         title: "Gen Z",
         photographer: "Devn",
         category: "fashion",
@@ -183,7 +190,8 @@ export const PRODUCTS = [
     },
     {
         id: 8,
-        src: "./assets/greg-nunes-hmzKoapQuYY-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/greg-nunes-hmzKoapQuYY-unsplash.jpg",
         title: "Home",
         photographer: "Greg Nunes",
         category: "nature",
@@ -209,7 +217,8 @@ export const PRODUCTS = [
     },
     {
         id: 9,
-        src: "./assets/guillermo-ferla-e4Yv_AWY2W4-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/guillermo-ferla-e4Yv_AWY2W4-unsplash.jpg",
         title: "Full Moon",
         photographer: "Guillermo Ferla",
         category: "nature",
@@ -235,7 +244,8 @@ export const PRODUCTS = [
     },
     {
         id: 10,
-        src: "./assets/james-shepperdley-0gKCRBt1h1Y-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/james-shepperdley-0gKCRBt1h1Y-unsplash.jpg",
         title: "Airplane",
         photographer: "James Shepperdley",
         category: "patterns",
@@ -261,7 +271,8 @@ export const PRODUCTS = [
     },
     {
         id: 11,
-        src: "./assets/juno-jo-jbBSP5g5tPk-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/juno-jo-jbBSP5g5tPk-unsplash.jpg",
         title: "Red Carpet",
         photographer: "Juno Jo",
         category: "fashion",
@@ -287,7 +298,8 @@ export const PRODUCTS = [
     },
     {
         id: 12,
-        src: "./assets/lukasz-szmigiel-mMpOinVjdkA-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/lukasz-szmigiel-mMpOinVjdkA-unsplash.jpg",
         title: "Hillside",
         photographer: "Lukasz Szmigiel",
         category: "nature",
@@ -313,7 +325,8 @@ export const PRODUCTS = [
     },
     {
         id: 13,
-        src: "./assets/martin-brechtl-FBr_j08ZR1A-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/martin-brechtl-FBr_j08ZR1A-unsplash.jpg",
         title: "Mountain Top",
         photographer: "Martin Brechtl",
         category: "nature",
@@ -339,7 +352,8 @@ export const PRODUCTS = [
     },
     {
         id: 14,
-        src: "./assets/mohamad-mahdi-abbasi-X5ECu9pqJFQ-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/mohamad-mahdi-abbasi-X5ECu9pqJFQ-unsplash.jpg",
         title: "Dome",
         photographer: "Mohama Mahdi",
         category: "patterns",
@@ -365,7 +379,8 @@ export const PRODUCTS = [
     },
     {
         id: 15,
-        src: "./assets/rachael-ren-Ueu_6ZrVb80-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/rachael-ren-Ueu_6ZrVb80-unsplash.jpg",
         title: "Timeless Kicks",
         photographer: "Rachael Ren",
         category: "fashion",
@@ -391,7 +406,8 @@ export const PRODUCTS = [
     },
     {
         id: 16,
-        src: "./assets/surendra-singh-jhYmzcH9eSI-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/surendra-singh-jhYmzcH9eSI-unsplash.jpg",
         title: "Spiral Support",
         photographer: "Surendra Singh",
         category: "patterns",
@@ -417,7 +433,8 @@ export const PRODUCTS = [
     },
     {
         id: 17,
-        src: "./assets/tatonomusic-ca9kLXBJMrM-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/tatonomusic-ca9kLXBJMrM-unsplash.jpg",
         title: "Island Paradise",
         photographer: "John Doe",
         category: "nature",
@@ -443,7 +460,8 @@ export const PRODUCTS = [
     },
     {
         id: 18,
-        src: "./assets/valentin-lacoste-6OiHO4CnSgI-unsplash.jpg",
+        src:
+            "https://ncolavita.com/projects/preyemer/assets/valentin-lacoste-6OiHO4CnSgI-unsplash.jpg",
         title: "Dots on Dots",
         photographer: "Valentin Lacoste",
         category: "patterns",

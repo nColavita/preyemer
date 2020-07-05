@@ -20,7 +20,7 @@ const CategoryImage = styled(motion.div)`
     height: 350px;
 
     /* background-color: darkmagenta; */
-    background-image: url(${(props) => `../${props.image}`});
+    background-image: url(${(props) => `${props.image}`});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

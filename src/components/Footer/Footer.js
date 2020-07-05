@@ -33,7 +33,7 @@ const Footer = () => {
     return (
         <StyledFooter>
             <FooterContent>
-                <h3>Customer Service</h3>
+                <h3>Customer service</h3>
                 <ul>
                     <li>Returns</li>
                     <li>Help &amp; FAQs</li>
@@ -58,7 +58,7 @@ const Footer = () => {
             </FooterContent>
             <FooterContent></FooterContent>
             <FooterContent>
-                <h3>Find Us</h3>
+                <h3>Find us</h3>
                 <ul>
                     <li>LinkedIn</li>
                     <li>Twitter</li>
