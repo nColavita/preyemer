@@ -9,10 +9,18 @@ import NewArrival from "./NewArrival";
 const NewArrivalsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    justify-content: space-around;
 
-    width: 100%;
+    width: 85%;
     margin: auto;
+    grid-gap: 15px;
+
+    @media (max-width: 1000px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 const NewArrivals = () => {

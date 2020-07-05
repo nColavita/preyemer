@@ -10,12 +10,12 @@ const NewArrivalContainer = styled(motion.div)`
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    width: auto;
-    height: 300px;
+    width: 400px;
+    height: 280px;
 `;
 
 const NewArrivalImage = styled(motion.img)`
-    width: 100%;
+    width: 438px;
     height: 300px;
     object-fit: cover;
 `;

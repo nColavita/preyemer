@@ -23,17 +23,17 @@ const CategoryItemContentContainer = styled(motion.div)`
     h2 span {
         font-size: 1.5em;
         font-weight: 200;
-        margin-left: 5px;
     }
 
     ul {
         width: 70%;
-        margin: 55px 0;
+        margin: 25px 0;
     }
 
     li {
         list-style-type: none;
         font-size: 2em;
+        margin: 10px 0;
         &:hover {
             color: yellow;
         }
@@ -41,7 +41,28 @@ const CategoryItemContentContainer = styled(motion.div)`
 
     li span {
         font-weight: 600;
-        margin-left: 15px;
+    }
+
+    @media (max-width: 700px) {
+        h1 {
+            font-size: 1.5em;
+        }
+        h2 {
+            font-size: 1em;
+
+            span {
+                font-size: 1em;
+                font-weight: 200;
+                margin-left: 5px;
+            }
+        }
+        ul {
+            margin: 25px 0;
+        }
+        li {
+            font-size: 1em;
+            margin: 10px 0;
+        }
     }
 `;
 

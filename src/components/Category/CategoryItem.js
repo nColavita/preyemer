@@ -7,9 +7,14 @@ import CategoryItemContent from "./CategoryItemContent";
 const CategoryItemContainer = styled(motion.div)`
     cursor: pointer;
     position: relative;
-    width: 450px;
-    height: 350px;
+    width: 425px;
+    height: 325px;
     overflow: hidden;
+
+    @media (max-width: 700px) {
+        width: 325px;
+        height: 225px;
+    }
 `;
 
 const CategoryImage = styled(motion.div)`

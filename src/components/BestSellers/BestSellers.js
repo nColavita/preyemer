@@ -16,12 +16,22 @@ const BestSellersContainer = styled.div`
 
     margin-top: 100px;
 
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     align-items: center;
+    justify-content: center;
 
     h1 {
         font-weight: 200;
+    }
+
+    @media (max-width: 1000px) {
+        grid-template-columns: 50% 50%;
+        gap: 25px;
+        text-align: center;
+    }
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr;
     }
 `;
 

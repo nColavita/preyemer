@@ -11,6 +11,13 @@ const CategoryItemsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+
+    @media (max-width: 1000px) {
+        grid-template-columns: 50% 50%;
+    }
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 const CategoryItems = (props) => {

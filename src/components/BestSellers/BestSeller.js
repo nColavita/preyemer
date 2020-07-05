@@ -10,6 +10,10 @@ const BestSellerContainer = styled(motion.div)`
     width: 180px;
     height: 150px;
     overflow: hidden;
+
+    @media (max-width: 1000px) {
+        margin: auto;
+    }
 `;
 
 const BestSellerHoverContainer = styled(motion.div)`
