@@ -35,6 +35,7 @@ export const GlobalProvider = ({ children }) => {
             image: product.src,
             price: product.sizes.find((size) => size.size === selectedSize)
                 .price,
+            quantity: 1,
         };
 
         addProductToCart(productPayload);

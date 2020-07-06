@@ -5,7 +5,6 @@ import styled from "styled-components";
 // Styles //
 const BrandLink = styled(Link)`
     font-size: 2.5em;
-    margin-left: -155px;
 `;
 const BrandText = withRouter(styled.span`
     color: ${(props) => {

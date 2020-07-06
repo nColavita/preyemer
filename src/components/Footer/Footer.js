@@ -11,15 +11,18 @@ const StyledFooter = styled.div`
 
 const StyledFooterContentContainer = styled.div`
     display: grid;
-    grid-template-columns: 200px 200px 200px auto 200px;
+    grid-template-columns: repeat(4, 1fr);
 
     max-width: 1366px;
     margin: auto;
     width: 100%;
 
+    h3 {
+        text-decoration: underline;
+    }
+
     @media (max-width: 700px) {
         grid-template-columns: 50% 50%;
-        grid-row: auto auto;
     }
 `;
 
@@ -71,7 +74,6 @@ const Footer = () => {
                         <li>Careers</li>
                     </ul>
                 </FooterContent>
-                <FooterContent></FooterContent>
                 <FooterContent>
                     <h3>Find us</h3>
                     <ul>

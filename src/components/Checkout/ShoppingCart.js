@@ -58,6 +58,14 @@ const ShoppingCartContainer = styled.div`
     thead tr {
         text-align: left;
     }
+
+    @media (max-width: 1000px) {
+        max-height: 450px;
+        overflow: scroll;
+        table {
+            border-spacing: 0 25px;
+        }
+    }
 `;
 
 const NoItems = styled.div`
@@ -90,6 +98,7 @@ const ShoppingCart = (props) => {
                                 <th>Title</th>
                                 <th>Size</th>
                                 <th>Price</th>
+                                <th>Quantity</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -103,6 +112,7 @@ const ShoppingCart = (props) => {
                                         <td>{item.title}</td>
                                         <td>{item.size}</td>
                                         <td>${item.price}</td>
+                                        <td>{item.quantity}</td>
                                         <td>
                                             <motion.button
                                                 whileTap={{ scale: 0.9 }}
