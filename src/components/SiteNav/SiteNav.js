@@ -9,6 +9,10 @@ const SiteNavContainer = styled.div`
     display: flex;
     justify-content: center;
     margin: 25px 0 125px 0;
+
+    @media (max-width: 700px) {
+        margin: 25px 0 80px 0;
+    }
 `;
 
 const SiteNavListItem = styled.li`
@@ -17,6 +21,10 @@ const SiteNavListItem = styled.li`
     font-size: 1em;
     margin: 0 35px;
     font-size: 1.2em;
+
+    @media (max-width: 700px) {
+        margin: 0 10px;
+    }
 `;
 
 const activeClassName = "active";

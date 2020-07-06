@@ -35,6 +35,7 @@ const BestSellersContainer = styled.div`
     }
     @media (max-width: 700px) {
         grid-template-columns: 1fr 1fr;
+        margin-top: 20px;
     }
 `;
 

@@ -7,6 +7,10 @@ const StyledFooter = styled.div`
     background-color: white;
     color: black;
     padding: 25px;
+
+    @media (max-width: 700px) {
+        margin: 20px auto 0px auto;
+    }
 `;
 
 const StyledFooterContentContainer = styled.div`
@@ -23,6 +27,7 @@ const StyledFooterContentContainer = styled.div`
 
     @media (max-width: 700px) {
         grid-template-columns: 50% 50%;
+        margin: 20px auto 0px auto;
     }
 `;
 
