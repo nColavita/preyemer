@@ -2,23 +2,28 @@ import React from "react";
 import styled from "styled-components";
 
 const Form = styled.form`
+    margin: 15px 0;
     label {
         display: inline-block;
         margin: 15px 0;
         width: 100%;
         color: black;
 
-        h1 {
-            font-size: 1em;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
         input {
+            width: 85%;
             padding: 5px;
-            margin-left: 15px;
+            border: none;
+            border-bottom: solid black 1px;
+        }
+        input:focus {
+            outline-width: 0;
         }
     }
+`;
+
+const SubmitButton = styled.div`
+    width: 100%;
+    margin-top: 100px;
 
     input[type="submit"] {
         cursor: pointer;
@@ -28,42 +33,51 @@ const Form = styled.form`
         font-size: 1em;
         background-color: white;
         padding: 12px 20px 12px 40px;
+        margin-top: 10px;
     }
 `;
 
 const PayNowForm = (props) => {
     return (
-        <Form>
-            {/* <label>
-                <h1>Name:</h1>
-                <input type="text" name="name" id="" placeholder="First Name" />
-            </label>
-            <label>
-                <h1>Address 1:</h1>
-
-                <input
-                    type="text"
-                    name="address1"
-                    id=""
-                    placeholder="Address"
-                />
-            </label>
-            <label>
-                <h1>Address 2:</h1>
-                <input type="text" name="address" id="" placeholder="Apt" />
-            </label>
-            <label>
-                <h1>Card Information:</h1>
-                <input
-                    type="password"
-                    name="card"
-                    id=""
-                    placeholder="...1234"
-                />
-            </label>
-
-            <input type="submit" value="Submit" /> */}
-        </Form>
+        <>
+            <Form>
+                <label>
+                    <input
+                        type="text"
+                        name="name"
+                        id="fullname"
+                        placeholder="Full Name"
+                    />
+                </label>
+                <label>
+                    <input
+                        type="text"
+                        name="address1"
+                        id="address1"
+                        placeholder="Street, City, State"
+                    />
+                </label>
+                <label>
+                    <input
+                        type="text"
+                        name="address2"
+                        id="address2"
+                        placeholder="Apt # / PO Box"
+                    />
+                </label>
+                <label>
+                    <input
+                        type="password"
+                        name="card"
+                        id="card"
+                        placeholder="Credit / Debit ...1234"
+                    />
+                </label>
+            </Form>
+            <SubmitButton>
+                <input type="submit" value="Submit" />
+            </SubmitButton>
+        </>
     );
 };
 

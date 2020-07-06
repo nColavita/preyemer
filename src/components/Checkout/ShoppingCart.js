@@ -61,8 +61,7 @@ const ShoppingCartContainer = styled.div`
 
     @media (max-width: 1000px) {
         max-height: 450px;
-        overflow: scroll;
-        table {
+        overflow: table {
             border-spacing: 0 25px;
         }
     }
