@@ -34,6 +34,7 @@ const CategoryItemContentContainer = styled(motion.div)`
         list-style-type: none;
         font-size: 2em;
         margin: 10px 0;
+        z-index: 10;
         &:hover {
             color: yellow;
         }

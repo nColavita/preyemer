@@ -27,6 +27,8 @@ export const GlobalProvider = ({ children }) => {
 
     const addProductHandler = (product, selectedSize, e) => {
         e.preventDefault();
+        e.stopPropagation();
+        console.log("ITEM PRICE CLICKED");
 
         const productPayload = {
             id: Math.floor(Math.random() * 10000),

@@ -63,6 +63,7 @@ const BestSeller = (props) => {
         <BestSellerContainer
             onHoverStart={() => toggleOpen()}
             onHoverEnd={() => toggleOpen()}
+            onClick={() => toggleOpen()}
             initial={false}
             animate={isOpen ? "open" : "closed"}
             variants={scaleVariants}

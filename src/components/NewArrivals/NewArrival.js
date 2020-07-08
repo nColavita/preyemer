@@ -40,6 +40,7 @@ const NewArrival = (props) => {
         <NewArrivalContainer
             onHoverStart={() => toggleOpen()}
             onHoverEnd={() => toggleOpen()}
+            onClick={() => toggleOpen()}
         >
             <NewArrivalImage
                 initial={false}

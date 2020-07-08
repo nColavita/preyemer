@@ -21,8 +21,8 @@ const CategoryImage = styled(motion.div)`
     position: absolute;
     top: 0;
     left: 0;
-    width: 450px;
-    height: 350px;
+    width: 100%;
+    height: 325px;
 
     /* background-color: darkmagenta; */
     background-image: url(${(props) => `${props.image}`});
@@ -36,7 +36,7 @@ const CategoryItemHoverBG = styled(motion.div)`
     top: 0;
     left: 0;
     width: 100%;
-    height: 350px;
+    height: 325px;
     background: rgba(0, 0, 0, 0.85);
 `;
 
@@ -71,10 +71,9 @@ const CategoryItem = (props) => {
 
     return (
         <CategoryItemContainer
-            isOpen={isOpen}
             onHoverStart={() => toggleOpen()}
             onHoverEnd={() => toggleOpen()}
-            positionTransition
+            onClick={() => toggleOpen()}
         >
             <CategoryImage
                 image={props.product.src}
