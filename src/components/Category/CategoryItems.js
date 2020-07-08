@@ -32,7 +32,6 @@ const CategoryItems = (props) => {
                             key={product.id}
                             product={product}
                             addProductHandler={addProductHandler}
-                            isMobile={props.isMobile}
                         />
                     );
                 }

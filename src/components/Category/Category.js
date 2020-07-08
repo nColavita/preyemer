@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { isMobile } from "react-device-detect";
 
 import CategoryBG from "./CategoryBG";
 import CategoryItems from "./CategoryItems";
@@ -15,15 +14,10 @@ const CategoryContainer = styled.div`
 `;
 
 const Category = (props) => {
-    if (isMobile) {
-        console.log("MOBILE");
-    } else {
-        console.log("DESKTOP");
-    }
     return (
         <CategoryContainer>
             {/* <CategoryBG category={props.category} /> */}
-            <CategoryItems category={props.category} isMobile={isMobile} />
+            <CategoryItems category={props.category} />
         </CategoryContainer>
     );
 };
