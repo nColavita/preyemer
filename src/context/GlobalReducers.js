@@ -5,23 +5,18 @@ export default (state, action) => {
                 ...state,
                 // cart: [action.payload, ...state.cart],
                 cart:
+                    // Items in cart?
                     state.cart.length > 0
                         ? state.cart.map((item) => {
-                              console.log(item);
-                              // If same item in cart was selected
-                              if (item.id === action.payload.id) {
-                                  // If same item & same size in cart was selected
-                                  if (item.price === action.payload.price) {
-                                      return {
-                                          ...item,
-                                          quantity: item.quantity + 1,
-                                      };
-                                  } else {
-                                      return [action.payload, ...state.cart];
-                                  }
-                              } else {
-                                  // Different item
-                                  return [action.payload, ...state.cart];
+                              // If same item & size
+                              if (
+                                  item.title === action.payload.title &&
+                                  item.size === action.payload.size
+                              ) {
+                                  return {
+                                      ...item,
+                                      quantity: item.quantity + 1,
+                                  };
                               }
                           })
                         : // No items in cart state, add item.
