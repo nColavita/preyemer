@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import CategoryBG from "./CategoryBG";
+// import CategoryBG from "./CategoryBG";
 import CategoryItems from "./CategoryItems";
 
 const CategoryContainer = styled.div`

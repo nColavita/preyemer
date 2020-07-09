@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 import { GlobalContext } from "../../context/GlobalContext";
 
 const ShoppingCartContainer = styled.div`
-    height: 100%;
     background-color: white;
-    padding: 25px;
+    max-height: 550px;
+    padding: 25px 75px;
     color: black;
+    overflow: auto;
 
     h1 {
         font-size: 2em;
@@ -21,7 +22,6 @@ const ShoppingCartContainer = styled.div`
         margin-top: 25px;
 
         td {
-            text-align: left;
             font-size: 0.9em;
 
             img {
@@ -32,9 +32,15 @@ const ShoppingCartContainer = styled.div`
         }
     }
 
+    th,
+    td {
+        text-align: center;
+        padding: 10px 10px;
+    }
+
     button {
         cursor: pointer;
-        background-color: red;
+        background-color: #c91313;
         color: white;
         font-weight: 600;
         border: none;
@@ -48,11 +54,6 @@ const ShoppingCartContainer = styled.div`
 
     button:focus {
         outline: none;
-    }
-
-    table th,
-    table td {
-        width: 75px;
     }
 
     thead tr {

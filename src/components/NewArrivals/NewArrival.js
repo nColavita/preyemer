@@ -34,7 +34,7 @@ const imageVariants = {
 const NewArrival = (props) => {
     const [isOpen, toggleOpen] = useCycle(false, true);
 
-    const { addProductHandler, iconPath } = useContext(GlobalContext);
+    const { addProductHandler } = useContext(GlobalContext);
 
     return (
         <NewArrivalContainer

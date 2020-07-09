@@ -6,7 +6,7 @@ import PayNowForm from "./PayNowForm";
 const PayNowContainer = styled.div`
     height: 550px;
     background-color: white;
-    padding: 25px;
+    padding: 40px;
     color: black;
 
     h1 {
@@ -37,12 +37,20 @@ const PayNow = (props) => {
 
     return (
         <PayNowContainer>
-            <h1>Checkout</h1>
-            <hr />
             <StyledTotal>
                 <h2>total</h2>
                 <h1>${total}</h1>
             </StyledTotal>
+            <hr />
+            <h1
+                style={{
+                    fontWeight: "600",
+                    margin: "25px 0",
+                    fontSize: "1.35em",
+                }}
+            >
+                Checkout
+            </h1>
             <PayNowForm />
         </PayNowContainer>
     );

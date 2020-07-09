@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const Form = styled.form`
-    margin: 15px 0;
     label {
         display: inline-block;
         margin: 15px 0;
@@ -11,9 +10,10 @@ const Form = styled.form`
 
         input {
             width: 85%;
-            padding: 5px;
+            padding: 10px;
             border: none;
             border-bottom: solid black 1px;
+            background-color: rgb(60, 0, 140, 0.15);
         }
         input:focus {
             outline-width: 0;
@@ -23,17 +23,26 @@ const Form = styled.form`
 
 const SubmitButton = styled.div`
     width: 100%;
-    margin-top: 100px;
+    /* margin-top: 80px; */
 
     input[type="submit"] {
         cursor: pointer;
         width: 100%;
-        border: 2px solid #ccc;
+        border: 2px solid #4c266c;
         border-radius: 4px;
-        font-size: 1em;
+        font-weight: 600;
+        font-size: 1.25em;
         background-color: white;
-        padding: 12px 20px 12px 40px;
+        padding: 10px 50px;
         margin-top: 10px;
+
+        transition: all 0.5s;
+    }
+
+    input[type="submit"]:hover {
+        color: white;
+        background-color: #4c266c;
+        border: 2px solid #4c266c;
     }
 `;
 
