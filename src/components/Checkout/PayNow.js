@@ -26,20 +26,21 @@ const StyledTotal = styled.div`
 `;
 
 const PayNow = (props) => {
-    const amounts =
-        props.cart.length > 0 ? props.cart.map((item) => item.price) : 0;
-    const total =
-        props.cart.length > 0
-            ? amounts.reduce(
-                  (total, amount) => parseFloat(total) + parseFloat(amount)
-              )
-            : 0;
+    const getTotal = (items) => {
+        let total = 0;
+
+        items.map((item) => {
+            return (total += item.quantity * item.price);
+        });
+
+        return total;
+    };
 
     return (
         <PayNowContainer>
             <StyledTotal>
                 <h2>total</h2>
-                <h1>${total}</h1>
+                <h1>${getTotal(props.cart)}</h1>
             </StyledTotal>
             <hr />
             <h1

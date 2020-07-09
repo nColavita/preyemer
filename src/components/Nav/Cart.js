@@ -15,10 +15,21 @@ export const StyledCart = styled(Link)`
 
 const Cart = () => {
     const { cart } = useContext(GlobalContext);
+
+    const cartTotal = (items) => {
+        let total = 0;
+
+        items.map((item) => {
+            total += item.quantity;
+        });
+
+        return total;
+    };
+
     return (
         <StyledCart to="/checkout">
             <h4>
-                <span>cart </span>( {cart.length} )
+                <span>cart </span>( {cartTotal(cart)} )
             </h4>
         </StyledCart>
     );
