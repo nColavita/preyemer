@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 import {
     StyledNavLinks,
@@ -6,9 +7,15 @@ import {
     StyledNavButton,
 } from "../styled/NavLinks";
 
+const NewStyledNavLinks = styled(StyledNavLinks)`
+    @media (max-width: 1000px) {
+        display: none;
+    }
+`;
+
 const NavLinks = () => {
     return (
-        <StyledNavLinks>
+        <NewStyledNavLinks>
             <StyledNavLink>
                 <StyledNavButton to="/about-us">about us</StyledNavButton>
             </StyledNavLink>
@@ -18,7 +25,7 @@ const NavLinks = () => {
             <StyledNavLink>
                 <StyledNavButton to="/careers">careers</StyledNavButton>
             </StyledNavLink>
-        </StyledNavLinks>
+        </NewStyledNavLinks>
     );
 };
 

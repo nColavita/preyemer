@@ -20,7 +20,7 @@ const Container = styled.div`
     width: 100%;
     max-width: 1366px;
     margin: 0 auto;
-    padding-top: 20px;
+    padding: 20px 20px 0 20px;
 `;
 
 const App = () => {
